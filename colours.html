@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chimaera System // Chromatic Explorer</title>
+    <style>
+        /* --- SYSTEM FONTS & RESET --- */
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=JetBrains+Mono:wght@400;700&display=swap');
+
+        :root {
+            /* Core Backgrounds */
+            --bg-deep: #0b140e;
+            --bg-surface: #172e1f;
+            --bg-card: #132117;
+            
+            /* Text */
+            --txt-primary: #e2e5e3;
+            --txt-secondary: #909b93;
+            --txt-muted: #5d6d61;
+            
+            /* Accents */
+            --acc-toxic: #4A851C;
+            --acc-rust: #2e1f17;
+            --acc-purple: #2e1726;
+            
+            /* Layout */
+            --sidebar-w: 280px;
+        }
+
+        * { box-sizing: border-box; outline: none; }
+        
+        body {
+            background-color: var(--bg-deep);
+            color: var(--txt-primary);
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            display: flex;
+            min-height: 100vh;
+        }
+
+        /* --- TYPOGRAPHY --- */
+        h1, h2, h3, h4 { margin: 0; font-weight: 800; letter-spacing: -0.03em; }
+        h1 { font-size: 3rem; line-height: 1; margin-bottom: 0.5rem; }
+        h2 { font-size: 1.5rem; margin-bottom: 1.5rem; border-bottom: 1px solid var(--txt-muted); padding-bottom: 1rem; display: flex; justify-content: space-between; align-items: flex-end;}
+        h3 { font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--txt-muted); margin-bottom: 1rem; }
+        
+        .mono { font-family: 'JetBrains Mono', monospace; font-size: 0.75rem; opacity: 0.7; }
+        .section-tag { font-family: 'JetBrains Mono', monospace; color: var(--acc-toxic); font-size: 0.8rem; }
+
+        /* --- LAYOUT --- */
+        aside {
+            width: var(--sidebar-w);
+            background: #040805;
+            padding: 40px;
+            border-right: 1px solid #2d4234;
+            position: fixed;
+            height: 100vh;
+            overflow-y: auto;
+            z-index: 10;
+        }
+
+        main {
+            margin-left: var(--sidebar-w);
+            flex: 1;
+            padding: 60px 80px;
+            max-width: 1600px;
+        }
+
+        section { margin-bottom: 100px; }
+
+        /* --- COMPONENT: RAMP BARCODES (Tints/Shades) --- */
+        .ramp-container {
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+        }
+
+        .ramp-group {
+            background: var(--bg-card);
+            padding: 20px;
+            border-radius: 12px;
+            border: 1px solid #2d4234;
+        }
+
+        .spectrum-bar {
+            display: flex;
+            height: 120px;
+            width: 100%;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+
+        .spectrum-slice {
+            flex: 1;
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+            padding-bottom: 10px;
+            transition: flex 0.3s ease;
+            position: relative;
+            cursor: crosshair;
+        }
+
+        .spectrum-slice:hover { flex: 3; }
+        .spectrum-slice span { 
+            writing-mode: vertical-rl; 
+            transform: rotate(180deg); 
+            font-family: 'JetBrains Mono', monospace; 
+            font-size: 10px; 
+            opacity: 0; 
+            transition: opacity 0.2s;
+            background: rgba(0,0,0,0.5);
+            padding: 4px 2px;
+        }
+        .spectrum-slice:hover span { opacity: 1; color: white; }
+
+        /* --- COMPONENT: INTERACTIVE STATES (Varied Circular) --- */
+        .state-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .state-card {
+            background: #080f0a;
+            border: 1px solid #172e1f;
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        .state-visualizer {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            height: 60px;
+            border-radius: 6px;
+            overflow: hidden;
+            margin-bottom: 15px;
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .sv-block { display: grid; place-items: center; font-size: 10px; color: rgba(255,255,255,0.5); }
+        
+        /* --- COMPONENT: MUTED CHIPS --- */
+        .chip-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+            gap: 15px;
+        }
+
+        .chip {
+            aspect-ratio: 1;
+            border-radius: 50%;
+            position: relative;
+            overflow: hidden;
+            border: 1px solid rgba(255,255,255,0.05);
+            transition: transform 0.3s ease;
+        }
+        .chip:hover { transform: scale(1.05); border-color: var(--acc-toxic); }
+
+        .chip-half { position: absolute; width: 100%; height: 50%; }
+        .chip-top { top: 0; }
+        .chip-btm { bottom: 0; }
+        
+        .chip-label {
+            position: absolute;
+            top: 50%; left: 50%;
+            transform: translate(-50%, -50%);
+            background: var(--bg-deep);
+            padding: 5px 10px;
+            font-size: 0.6rem;
+            border-radius: 10px;
+            white-space: nowrap;
+            font-family: 'JetBrains Mono', monospace;
+        }
+
+        /* --- COMPONENT: ALCHEMY MIXINS --- */
+        .alchemy-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+        }
+
+        .mixin-box {
+            background: var(--bg-surface);
+            border: 1px solid #2d4234;
+            border-radius: 16px;
+            padding: 40px;
+            position: relative;
+            overflow: hidden;
+            min-height: 300px;
+        }
+
+        .orb {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(40px);
+            mix-blend-mode: screen; /* Crucial for light-on-dark mixing */
+        }
+        
+        /* Text overlay for alchemy */
+        .alchemy-text {
+            position: relative;
+            z-index: 2;
+            font-size: 2rem;
+            font-weight: 800;
+            color: white;
+            mix-blend-mode: overlay;
+        }
+
+        /* --- NAVIGATION LINKS --- */
+        .nav-link {
+            display: block;
+            color: var(--txt-muted);
+            text-decoration: none;
+            margin-bottom: 15px;
+            font-size: 0.9rem;
+            transition: color 0.2s;
+        }
+        .nav-link:hover { color: var(--acc-toxic); }
+        .nav-link.active { color: var(--txt-primary); font-weight: 600; border-left: 2px solid var(--acc-toxic); padding-left: 10px; margin-left: -12px; }
+
+        /* Utility for Text Colors in swatches */
+        .txt-dark { color: #000 !important; }
+        .txt-light { color: #fff !important; }
+
+    </style>
+</head>
+<body>
+
+    <aside>
+        <div style="margin-bottom: 60px;">
+            <div class="mono" style="color: var(--acc-toxic);">SYS_V.2.0</div>
+            <h1 style="font-size: 1.8rem; margin-top: 10px;">CHIMAERA</h1>
+            <p style="font-size: 0.8rem; color: var(--txt-muted);">Biological Darkness &<br>Industrial Decay.</p>
+        </div>
+
+        <nav>
+            <a href="#primary" class="nav-link active">01 // Green Primary</a>
+            <a href="#secondary" class="nav-link">02 // Rust Secondary</a>
+            <a href="#interaction" class="nav-link">03 // Interaction Matrix</a>
+            <a href="#muted" class="nav-link">04 // Muted Collection</a>
+            <a href="#alchemy" class="nav-link">05 // Alchemy & Mixins</a>
+            <a href="#accents" class="nav-link">06 // Catalysts (Toxic)</a>
+        </nav>
+
+        <div style="margin-top: auto; padding-top: 60px;">
+            <div class="mono">NEUTRAL QUATERNARY</div>
+            <div style="display: flex; gap: 5px; margin-top: 10px;">
+                <div style="flex:1; height: 30px; background: #171a2e;" title="Blue Q"></div>
+                <div style="flex:1; height: 30px; background: #383948;" title="Blue Q Light"></div>
+                <div style="flex:1; height: 30px; background: #2e2a17;" title="Yellow Q"></div>
+                <div style="flex:1; height: 30px; background: #484537;" title="Yellow Q Light"></div>
+            </div>
+            <div class="mono" style="margin-top: 5px;">Blue / Yellow Neutral</div>
+        </div>
+    </aside>
+
+    <main>
+        
+        <section id="primary">
+            <h2>
+                <span>Green Spectrum</span>
+                <span class="section-tag">PRIMARY ANCHOR</span>
+            </h2>
+            <div class="ramp-container">
+                
+                <div class="ramp-group">
+                    <h3>Luminance Ramp (Tints)</h3>
+                    <div class="spectrum-bar">
+                        <div class="spectrum-slice" style="background:#172e1f"><span class="txt-light">BASE #172e1f</span></div>
+                        <div class="spectrum-slice" style="background:#2d4234"><span class="txt-light">#2d4234</span></div>
+                        <div class="spectrum-slice" style="background:#44574a"><span class="txt-light">#44574a</span></div>
+                        <div class="spectrum-slice" style="background:#5d6d61"><span class="txt-light">#5d6d61</span></div>
+                        <div class="spectrum-slice" style="background:#76847a"><span class="txt-light">#76847a</span></div>
+                        <div class="spectrum-slice" style="background:#909b93"><span class="txt-dark">#909b93</span></div>
+                        <div class="spectrum-slice" style="background:#aab3ad"><span class="txt-dark">#aab3ad</span></div>
+                        <div class="spectrum-slice" style="background:#c6ccc8"><span class="txt-dark">#c6ccc8</span></div>
+                        <div class="spectrum-slice" style="background:#e2e5e3"><span class="txt-dark">#e2e5e3</span></div>
+                        <div class="spectrum-slice" style="background:#ffffff"><span class="txt-dark">#ffffff</span></div>
+                    </div>
+                </div>
+
+                <div class="ramp-group">
+                    <h3>Density Ramp (Shades)</h3>
+                    <div class="spectrum-bar">
+                        <div class="spectrum-slice" style="background:#172e1f"><span class="txt-light">BASE</span></div>
+                        <div class="spectrum-slice" style="background:#162a1c"><span class="txt-light">#162a1c</span></div>
+                        <div class="spectrum-slice" style="background:#14251a"><span class="txt-light">#14251a</span></div>
+                        <div class="spectrum-slice" style="background:#132117"><span class="txt-light">#132117</span></div>
+                        <div class="spectrum-slice" style="background:#111d15"><span class="txt-light">#111d15</span></div>
+                        <div class="spectrum-slice" style="background:#0f1912"><span class="txt-light">#0f1912</span></div>
+                        <div class="spectrum-slice" style="background:#0b140e"><span class="txt-light">#0b140e</span></div>
+                        <div class="spectrum-slice" style="background:#080f0a"><span class="txt-light">#080f0a</span></div>
+                        <div class="spectrum-slice" style="background:#040805"><span class="txt-light">#040805</span></div>
+                        <div class="spectrum-slice" style="background:#000000"><span class="txt-light">#000000</span></div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="secondary">
+            <h2>
+                <span>Rust Spectrum</span>
+                <span class="section-tag" style="color: #bc6b4c">SECONDARY WARMTH</span>
+            </h2>
+            <div class="ramp-container">
+                <div class="ramp-group" style="border-color: #594945;">
+                    <h3>Oxidation Ramp</h3>
+                    <div class="spectrum-bar">
+                        <div class="spectrum-slice" style="background:#2e1f17; flex: 2;"><span class="txt-light">BASE</span></div>
+                        <div class="spectrum-slice" style="background:#43332d"><span class="txt-light">#43332d</span></div>
+                        <div class="spectrum-slice" style="background:#594945"><span class="txt-light">#594945</span></div>
+                        <div class="spectrum-slice" style="background:#70605d"><span class="txt-light">#70605d</span></div>
+                        <div class="spectrum-slice" style="background:#867977"><span class="txt-light">#867977</span></div>
+                        <div class="spectrum-slice" style="background:#9e9291"><span class="txt-dark">#9e9291</span></div>
+                        <div class="spectrum-slice" style="background:#b5acac"><span class="txt-dark">#b5acac</span></div>
+                        <div class="spectrum-slice" style="background:#cdc7c8"><span class="txt-dark">#cdc7c8</span></div>
+                        <div class="spectrum-slice" style="background:#e6e3e3"><span class="txt-dark">#e6e3e3</span></div>
+                    </div>
+                    <div class="spectrum-bar" style="height: 40px; margin-top: 10px;">
+                         <div class="spectrum-slice" style="background:#2a1c16"></div>
+                         <div class="spectrum-slice" style="background:#261915"></div>
+                         <div class="spectrum-slice" style="background:#221714"></div>
+                         <div class="spectrum-slice" style="background:#1e1412"></div>
+                         <div class="spectrum-slice" style="background:#1a1110"></div>
+                         <div class="spectrum-slice" style="background:#160d0e"></div>
+                         <div class="spectrum-slice" style="background:#10090a"></div>
+                         <div class="spectrum-slice" style="background:#000000"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="interaction">
+            <h2>
+                <span>Interaction Matrix</span>
+                <span class="section-tag">VARIED CIRCULAR</span>
+            </h2>
+            <p style="color:var(--txt-secondary); margin-bottom: 30px; max-width: 600px;">
+                These triplets represent interactive states for UI components. Left is <strong>Default</strong>, Center is <strong>High-Gloss (Hover)</strong>, Right is <strong>Deep (Active/Pressed)</strong>.
+            </p>
+
+            <div class="state-grid">
+                <div class="state-card">
+                    <h3>Warm Neutral</h3>
+                    <div class="state-visualizer">
+                        <div class="sv-block" style="background:#312b1e">Base</div>
+                        <div class="sv-block" style="background:#3c3629; color:white;">Hover</div>
+                        <div class="sv-block" style="background:#241f12">Active</div>
+                    </div>
+                    <div class="mono">#312b1e / #3c3629 / #241f12</div>
+                </div>
+
+                <div class="state-card">
+                    <h3>Olive Neutral</h3>
+                    <div class="state-visualizer">
+                        <div class="sv-block" style="background:#32372b">Base</div>
+                        <div class="sv-block" style="background:#4a4f41; color:white;">Hover</div>
+                        <div class="sv-block" style="background:#191e12">Active</div>
+                    </div>
+                    <div class="mono">#32372b / #4a4f41 / #191e12</div>
+                </div>
+
+                <div class="state-card">
+                    <h3>Forest Neutral</h3>
+                    <div class="state-visualizer">
+                        <div class="sv-block" style="background:#36423b">Base</div>
+                        <div class="sv-block" style="background:#5a675f; color:white;">Hover</div>
+                        <div class="sv-block" style="background:#111c15">Active</div>
+                    </div>
+                    <div class="mono">#36423b / #5a675f / #111c15</div>
+                </div>
+
+                <div class="state-card">
+                    <h3>Slate Neutral</h3>
+                    <div class="state-visualizer">
+                        <div class="sv-block" style="background:#3f4d4b">Base</div>
+                        <div class="sv-block" style="background:#707f7d; color:white;">Hover</div>
+                        <div class="sv-block" style="background:#0b1918">Active</div>
+                    </div>
+                    <div class="mono">#3f4d4b / #707f7d / #0b1918</div>
+                </div>
+
+                 <div class="state-card">
+                    <h3>Steel Neutral</h3>
+                    <div class="state-visualizer">
+                        <div class="sv-block" style="background:#4c5659">Base</div>
+                        <div class="sv-block" style="background:#8c979a; color:#000;">Hover</div>
+                        <div class="sv-block" style="background:#0a1518">Active</div>
+                    </div>
+                    <div class="mono">#4c5659 / #8c979a / #0a1518</div>
+                </div>
+
+                 <div class="state-card">
+                    <h3>Cool Grey</h3>
+                    <div class="state-visualizer">
+                        <div class="sv-block" style="background:#5b5f64">Base</div>
+                        <div class="sv-block" style="background:#aaafb4; color:#000;">Hover</div>
+                        <div class="sv-block" style="background:#0b1015">Active</div>
+                    </div>
+                    <div class="mono">#5b5f64 / #aaafb4 / #0b1015</div>
+                </div>
+            </div>
+        </section>
+
+        <section id="muted">
+            <h2>
+                <span>Muted Collection</span>
+                <span class="section-tag">CAMOUFLAGE</span>
+            </h2>
+            <div class="chip-grid">
+                <div class="chip">
+                    <div class="chip-half chip-top" style="background: #33412f;"></div>
+                    <div class="chip-half chip-btm" style="background: #283624;"></div>
+                    <div class="chip-label">TYPE A</div>
+                </div>
+                <div class="chip">
+                    <div class="chip-half chip-top" style="background: #4f5543;"></div>
+                    <div class="chip-half chip-btm" style="background: #373d2c;"></div>
+                    <div class="chip-label">TYPE B</div>
+                </div>
+                <div class="chip">
+                    <div class="chip-half chip-top" style="background: #6b6a59;"></div>
+                    <div class="chip-half chip-btm" style="background: #464536;"></div>
+                    <div class="chip-label">TYPE C</div>
+                </div>
+                <div class="chip">
+                    <div class="chip-half chip-top" style="background: #868073;"></div>
+                    <div class="chip-half chip-btm" style="background: #534d41;"></div>
+                    <div class="chip-label">TYPE D</div>
+                </div>
+                <div class="chip">
+                    <div class="chip-half chip-top" style="background: #a0978e;"></div>
+                    <div class="chip-half chip-btm" style="background: #5e564e;"></div>
+                    <div class="chip-label">TYPE E</div>
+                </div>
+                <div class="chip">
+                    <div class="chip-half chip-top" style="background: #b9afaa;"></div>
+                    <div class="chip-half chip-btm" style="background: #68605b;"></div>
+                    <div class="chip-label">TYPE F</div>
+                </div>
+            </div>
+        </section>
+
+        <section id="alchemy">
+            <h2>
+                <span>Alchemy & Mixins</span>
+                <span class="section-tag">BLEND MODES</span>
+            </h2>
+            
+            <div class="alchemy-container">
+                <div class="mixin-box" style="background: radial-gradient(circle at top right, #172e1f, #000);">
+                    <div class="orb" style="width: 200px; height: 200px; background: #4A851C; top: -50px; left: -50px; opacity: 0.6;"></div>
+                    <div class="orb" style="width: 300px; height: 300px; background: #2e1726; bottom: -100px; right: -50px; opacity: 0.8;"></div>
+                    
+                    <div style="position: relative; z-index: 5; margin-top: 100px;">
+                        <h4 style="font-size: 2rem; color: #e2e5e3; mix-blend-mode: hard-light;">Bio-Luminescence</h4>
+                        <p style="color: #909b93; max-width: 250px;">Mixing Toxic Green (#4A851C) into Deep Purple (#2e1726) creates a neon-noir aesthetic.</p>
+                    </div>
+                </div>
+
+                <div class="mixin-box" style="background: #0b140e; display: flex; align-items: center; justify-content: center;">
+                    <div style="position: absolute; width: 100%; height: 100%; background: linear-gradient(45deg, #2e1f17 0%, transparent 80%);"></div>
+                    <h1 style="font-size: 5rem; color: #44574a; opacity: 0.3; position: absolute; top: 20px; left: 20px;">085</h1>
+                    
+                    <div style="z-index: 2; text-align: center; border: 1px solid #749f51; padding: 20px; background: rgba(23, 46, 31, 0.8); backdrop-filter: blur(5px);">
+                        <span style="color: #749f51; font-family: 'JetBrains Mono'; display: block; margin-bottom: 10px;">SYSTEM ALERT</span>
+                        <span style="color: #fff; font-weight: bold;">CRITICAL FAILURE</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="accents">
+            <h2>
+                <span>Catalysts</span>
+                <span class="section-tag">TOXIC & PURPLE</span>
+            </h2>
+            
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+                <div style="background: #132117; padding: 20px; border-radius: 8px;">
+                    <h3>Toxic Green (Action)</h3>
+                    <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+                        <div style="width: 50px; height: 50px; background: #4A851C; border-radius: 4px;"></div>
+                        <div style="width: 50px; height: 50px; background: #5f9238; border-radius: 4px;"></div>
+                        <div style="width: 50px; height: 50px; background: #749f51; border-radius: 4px;"></div>
+                        <div style="width: 50px; height: 50px; background: #43751b; border-radius: 4px;"></div>
+                        <div style="width: 50px; height: 50px; background: #3b661a; border-radius: 4px;"></div>
+                        <div style="width: 50px; height: 50px; background: #7f851c; border-radius: 4px;"></div>
+                        <div style="width: 50px; height: 50px; background: #8e9239; border-radius: 4px;"></div>
+                        <div style="width: 50px; height: 50px; background: #70751b; border-radius: 4px;"></div>
+                    </div>
+                </div>
+
+                <div style="background: #132117; padding: 20px; border-radius: 8px;">
+                    <h3>Deep Purple (Shadow)</h3>
+                    <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+                         <div style="width: 50px; height: 50px; background: #2e1726; border-radius: 4px;"></div>
+                         <div style="width: 50px; height: 50px; background: #2a1522; border-radius: 4px;"></div>
+                         <div style="width: 50px; height: 50px; background: #26141e; border-radius: 4px;"></div>
+                         <div style="width: 50px; height: 50px; background: #22121a; border-radius: 4px;"></div>
+                         <div style="width: 50px; height: 50px; background: #1e1017; border-radius: 4px;"></div>
+                         <div style="width: 50px; height: 50px; background: #1a0d13; border-radius: 4px;"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+</body>
+</html>
