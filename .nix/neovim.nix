@@ -63,6 +63,12 @@ in {
       };
     };
 
+    clipboard = {
+      enable = true;
+      providers.wl-copy.enable = true;
+      registers = "unnamedplus";
+    };
+
     # Spelling
     spellcheck.enable = true;
     spellcheck.extraSpellWords = {
