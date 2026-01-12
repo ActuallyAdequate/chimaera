@@ -2,9 +2,7 @@
 
 ## Injury
 
-When the Mutated gains an injury whether from an attack or an accident, they
-must choose which Body Part they want to injure. Similiarly, when dealing an
-injury to another creature they get to choose which Body Part to Injure.
+Fighting other creatures is achieved by Dealing Injuries to the Body Parts Of creatures, this is how you can break a creatures Body Parts and eventually defeat them.
 
 ### Injury Types
 
@@ -16,19 +14,24 @@ resistance or defences to particular Injury types.
 - **Internal:** Represents illness injuries such as poisons, diseases, and
   ruptures
 
-### Taking an Injury
+### Dealing an Injury
 
-When taking an Injury, you must select one Body Part and increase its Disrepair
-by the number of Injuries dealt. If increasing the disrepair would cause it to
-become Broken, then the Body Part and all others attached to it can no longer be
-Activated
+Body Parts will allow you to Deal an Injury, to do so you will select what Limb of the creature you want to Deal the Injury to. The creature taking the Injury will then choose what Body Parts in that Limb gets Injured.
+
+That selected Body Part will have its Disrepair Increased by the number of Injuries.
+
+If increasing the Disrepair would cause the Body Parts to become Broken, then all other Body Parts attached to it can not be Executed when the Limb is Activated.
+
+Similarly if a Body Part is Severed or Obliterated all Body Parts attached to it are also Severed or Obliterated.
+
 
 > [INFO] When Mutating with Mutagenic Cells you can rearrange the order of the
 > Body Parts so that injured Body Parts don't disable an entire limb.
 
-> [INFO] Defeat If a Creature has no Body Parts left after taking an Injury they
-> become Defeated. This means they are unable to participate in the turn order
-> until they are given a new Body Part and Activate their Mutagenic Cells.
+> [INFO] Defeat 
+> If more than half of a creatures Body Parts are Broken they become Defeated. This means they are unable to participate in the turn order until they are given a new Body Part and Activate their Mutagenic Cells.
+>
+> A creature can use the Mutagenic Cells to detach Broken Body Parts, to delay defeat, however detached Broken Body Parts are Obliterated and this returned to the Body Part Deck
 
 ### Dealing an Injury
 
