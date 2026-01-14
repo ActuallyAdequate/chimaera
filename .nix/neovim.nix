@@ -103,6 +103,9 @@ in {
 
       markdown.enable = true;
       markdown.extensions.markview-nvim.enable = true;
+      python.enable = true;
+      yaml.enable = true;
+
     };
 
     extraPackages = with pkgs; [gcc nodejs-slim tree-sitter ripgrep fd viu];
@@ -159,6 +162,12 @@ in {
         mode = "n";
         action = ":ToggleTerm direction=horizontal<CR>";
         desc = "Toggle Horizontal Terminal";
+      }
+      { 
+        key = "<leader>d";
+        mode = "n";
+        action = ":lua vim.diagnostic.open_float()<CR>";
+        desc = "Display Diagnostic Information";
       }
     ];
   };

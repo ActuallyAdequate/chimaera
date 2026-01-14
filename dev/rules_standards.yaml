@@ -1,0 +1,62 @@
+glossary:
+  movement:
+    - Run
+    - Jump
+    - Climb
+    - Swim
+    - Dig
+    - Fly
+  distance:
+    - Personal Space
+    - Close
+    - Near
+    - Distant
+    - Afar
+  range:
+    - Reach
+    - Throw
+  injury:
+    - Physical
+    - Internal
+  body_system:
+    - Visual
+    - Auditory
+    - Aromatic
+    - Muscular
+    - Integumentary
+    - Circulatory
+    - Endocrine
+  scope:
+    - Body System
+    - Limb
+  condition:
+    - Acidic
+    - Blinded
+    - Boiling
+    - Burning
+    - Charmed
+    - Confused
+    - Deafened
+    - Disgusted
+    - Suffocating
+    - Freezing
+    - Frightened
+    - Impressed
+    - Poisoned
+    - Prone
+    - Restrained
+    - Parched
+  sense:
+    - See
+    - Smell
+    - Hear
+templates:
+  movement: '^({movement})( .*)? to ({distance})$'
+  range: '^({range}) to ({distance})$'
+  deal_injury: '^Deal \d+ ({injury}) Injury( (to the ({body_system}) system))?$'
+  ignore_injury: '^Ignore \d+ ({injury}) Injury( (to the ({body_system}) system)|(to this Limb) )?$'
+  grant_condition: '^Grant the ({condition}) condition( (except|for|from)(.*))?$'
+  ignore_condition: '^((This {scope} Ignores)|(Ignore)) the ({condition}) condition( (except|for|from)(.*))?$'
+  senses: '^({sense})( .*)? within ({distance})$'
+
+
