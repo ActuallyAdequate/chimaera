@@ -105,8 +105,9 @@ in {
       markdown.extensions.markview-nvim.enable = true;
       python.enable = true;
       yaml.enable = true;
-
     };
+
+    formatter.conform-nvim.enable = true;
 
     extraPackages = with pkgs; [gcc nodejs-slim tree-sitter ripgrep fd viu];
 
@@ -163,7 +164,7 @@ in {
         action = ":ToggleTerm direction=horizontal<CR>";
         desc = "Toggle Horizontal Terminal";
       }
-      { 
+      {
         key = "<leader>d";
         mode = "n";
         action = ":lua vim.diagnostic.open_float()<CR>";

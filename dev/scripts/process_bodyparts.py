@@ -1,3 +1,4 @@
+from collections import OrderedDict
 from pathlib import Path
 from ssl import TLSVersion
 from typing import cast
@@ -6,6 +7,7 @@ import pandas as pd
 import os
 import re
 import argparse
+import json
 
 BodyPart = dict[str, str | list[str]]
 
@@ -55,18 +57,24 @@ def generate_body_parts_tsv(body_parts: list[BodyPart], output_tsv: Path):
 ###################################################################################
 # Rule Standards Regex
 ###################################################################################
-def compile_dynamic_regex(standards):
+def compile_dynamic_regex(standards, output_folder):
     glossary = standards["glossary"]
     templates = standards["templates"]
-    compiled_rules = {}
+    compiled_rules = OrderedDict()
+    raw_rules = {}
 
-    replacements = {k: "|".join(v) for k, v in glossary.items()}
-
+    replacements = {k: f"(?:{'|'.join(v)})" for k, v in glossary.items()}
     for rule_name, template in templates.items():
         # Inject the joined strings into the curly braces in the template
         formatted_regex = template.format(**replacements)
+
+        # Collect Raw rules
+        raw_rules[rule_name] = formatted_regex
         # Compile for use in your report script
         compiled_rules[rule_name] = re.compile(formatted_regex, re.IGNORECASE)
+
+    with open(f"{output_folder}/regexes.txt", "w") as regex_file:
+        json.dump(raw_rules, regex_file, indent=4)
 
     return compiled_rules
 
@@ -79,7 +87,8 @@ def generate_report(body_parts: list[BodyPart], output_file, rule_patterns):
     total_body_parts = len(body_parts)
     ability_count: dict[int, list[str]] = {}
     system_stats: dict[str, list[str]] = {}
-    ability_stats: dict[str, list[tuple[str, str]]] = {}
+    ability_stats = {category: [] for category in rule_patterns.keys()}
+    ability_stats["unknown"] = []
     # condition_stats = {"granted": {}, "ignored": {}}
     # injury_stats = {
     #    "additional_injury": [],
@@ -300,7 +309,7 @@ if __name__ == "__main__":
     with open(rules_standards_file, "r") as f:
         data = yaml.safe_load(f)
 
-    rule_patterns = compile_dynamic_regex(data)
+    rule_patterns = compile_dynamic_regex(data, output_folder)
 
     # Generate a report based on the processed entries
     output_report = f"{output_folder}/{body_parts_filename}_report.md"

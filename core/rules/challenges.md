@@ -21,6 +21,9 @@ and the GM is not given a Hazard. If the number of bone fragments is less than
 the number of Body Parts the challenge fails. The Mutated still achieve what
 they wanted to, but the GM is granted a Hazard.
 
+If a Creature is completing a Challenge against the Mutated, a Failed Challenge
+means the Creature does not complete the Action.
+
 > [!INFO]
 > This represents how limbs with fewer Body Parts, while being able to do less
 > are more potent in their focus and therefor can succeed more often
@@ -34,23 +37,29 @@ navigate tricky paths, or traverse unstable formations. Hazards can be granted
 for difficult problem-solving, or finding hidden clues. Any activity that could
 fail, and isn't granted directly from a Body Part may be considered challenging.
 
+Sometimes Body Parts state that Abilities taken against the creature are
+Challenging, such as trying to see a creature with a camoflagued Body Part.
+
 ## Hazards
 
 The GM chooses how Hazards are allocated, to make the Mutated's situation more
 dangerous. They may spend them immediately after being granted to create a
-drawback to the current Action, or they may be allocated to the ecosystem you
-are in to increase its hostility, or they may be allocated to introduce
-complications to travelling or changing the Weather.
+drawback to the current Action such as: Ignoring Injuries, Ignoring Conditions,
+or forcing the Mutated to have an accident; or they may be allocated to the
+ecosystem you are in to increase its hostility, or they may be allocated to
+introduce complications to travelling or changing the Weather.
 
-## Succeed Abilities
+## Reducing a Challenge
 
-Some Abilities state that the Mutated Succeed at a particular activity. When the
-Mutated do this Activity it never grants a Hazard no matter how challenging it
-is.
+Some Abilities state that the Mutated can reduce a challenge When doing a
+particular activity. If the Muated incorporate this activity into their Action
+description, they can execute the challenge as if they had the the stated number
+less Body Parts in the Limb. For example if the Ability says "Use your knowledge
+of biology to reduce a challenge's difficulty by 2. Then you can execute the
+challenge as if it was done with 2 less Body Parts in the limb.
 
 > [!IMPORTANT]
 > This does not mean that any activity is possible, something may just be
 > impossible, such as trying to persuade an enraged monster to donate their
 > limbs to you. But if something would be challenging such as threatening a
-> creature to take you to their lair, you would be able to succeed without the
-> challenge.
+> creature to take you to their lair, you would be able to execute a challenge

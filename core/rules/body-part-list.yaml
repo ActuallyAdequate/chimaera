@@ -3,9 +3,9 @@ body:
   system: endocrine
   description: Cells imbued with mutagenic serum
   activated_abilities: 
-  - Attach, Remove, and Rearrange your Body Parts
+    - Attach, Remove, and Rearrange your Body Parts
   passive_abilities:
-  - When attaching Body Parts from Defeated creatures you can heal the Body Part to Healthy
+    - When attaching Body Parts from Defeated creatures you can heal the Body Part to Healthy
 - title: Eyes
   system: sight
   description: Eyes that can see the 300-780nm spectrum of light
@@ -16,442 +16,442 @@ body:
   system: auditory
   description: Ears that can hear between 20hz and 20000hz
   passive_abilities: 
-    - You can hear loud noises
+- You can hear loud noises
 - title: Snout
   system: aromatic
   description: A Mouth with a tongue a set of incisors, canines and molars.
   passive_abilities:
-    - Communicate verbally
+    - Use your voice to Communicate
     - Smell pungent odours
     - Taste spiced flavours
 - title: Limbs
   system: muscular
   description: Appendages that can be manipulated
   activated_abilities:
-    - Reach to a distance Close
-    - Walk to a distance Near
-    - Swim to a distance Near
-    - Deal 1 Physical Injury when you hit something
+    - Reach to Close
+    - Walk to Near
+    - Float to Near
+    - Punch to Deal 1 Physical Injury
     - Pick up and handle an object
 - title: Brain
   system: thought
   description: A soft brain capable of complex thought
   activated_abilities:
-  - Voluntarily inhibit one of your Body Systems
-  - Uninhibit a Body System that you voluntarily inhibited
+    - Voluntarily inhibit one of your Body Systems
+    - Uninhibit a Body System that you voluntarily inhibited
   passive_abilities:
-  - Communicate to other intelligent creatures
   - Introspect about problems and memories
 body_parts:
 - title: Slater's Thorax
   system: muscular
-  description: A segemented shell that can curl into a ball
+  description: A tough segmented shell that can curl into a ball
   activated_abilities:
-  - Ignore Physical Injuries until your next Turn when curled
+    - Roll to Distant
   passive_abilities:
-  - Ignore the Prone Condition
+    - Ignore the Prone Condition
+    - Ignore 1 Physical Injury to this Limb
 - title: Slug Foot
   system: muscular
-  description: A sticky foot that excretes slime
+  description: A foot that excretes slime and can stick to smooth walls and ceilings
   activated_abilities:
-  - Slide to a distance Close
-  - Stick to walls and ceilings
+    - Climb to Close
   passive_abilities:
-  - Ignore the Burning Condition
-- title: Racoon Torso
+    - Ignore the Burning Condition
+- title: Raccoon Torso
   system: endocrine
   description: Your body can twist and contort, has short hairs, and a resilient stomach
   activated_abilities:
-  - Fit into tight spaces of about 20cm on a side
+    - Squeeze to Close
   passive_abilities:
-  - Ignore the Freezing Condition
-  - Ignore the Poisoned Condition caused by something you ate
+    - Ignore the Freezing Condition
+    - Ignore the Poisoned Condition from something you ate
 - title: Octopus Mantle
   system: thought
-  description: A morphus cranium covered in skin that can change colours
+  description: An amorphous cranium covered in skin that can change colours
   activated_abilities:
-  - Become invisible, preventing detection by sight
-  - Make an observations about biology to Succeed at deduction
-  passive_abilities:
-  - Fit in tight spaces of about 20cm on a side
+    - Use camouflage to reduce a Challenge's difficulty by 2
+    - Squeeze to Near
 - title: Starfish Ray
   system: circulatory
-  description: A hard ray that protudes from the body with suction cups lined on the bottom
+  description: A hard ray that extends from the body with suction cups lined on the bottom
   activated_abilities:
-  - Reach to a distance of Close
-  - Broken, Obliterated or Severed Body Parts can be regenerated after an hour
-  - Stick to walls and ceilings
+    - Reach to Close
+    - Broken, Obliterated or Severed Body Parts can be regenerated after an hour
+    - Climb to Near
 - title: Glow Worm Abdomen
   system: endocrine
-  description: Produce a thread that has biolumenescent properties
+  description: Produce a thread that has bioluminescent properties, that can create a pulsating light
   activated_abilities:
-  - Produce 5m of thread
-  - Create pulsating light that gives the Charmed condition to others that have sight of it
+    - Produce an arms-length of thread
+    - Grant the Charmed condition to creatures that See the pulsating light
   passive_abilities:
-  - The thread expels light up to distance of Distant
-  - The thread can be snapped when it takes 1 Physical Injury
+    - The thread expels light up to distance of Distant
+    - The thread can be snapped when it takes 1 Physical Injury
 - title: Jellyfish Bell
   system: thought
-  description: A tranparent soft umbrella like head that has electrical tenticles
+  description: A transparent soft umbrella like head with tentacles that can send out an electrical shot
   activated_abilities:
-  - Reach to a distance of Close
-  - Electrocute something to Deal 1 Internal Damage, the electricity travels through conductive material
+    - Reach to Near
+    - Electrocute to Deal 1 Internal Injury
+    - Squeeze to Close
   passive_abilities:
-  - Ignore Injuries from being electrocuted.
-  - Fit in tight spaces of about 20cm on a side
+    - Ignore all Injuries from being electrocuted.
 - title: Tarantula Cephalothorax
   system: integumentary
-  description: Sharp bristles adorne the body and can be ejected.
+  description: Sharp bristles adorn the body and can be ejected.
   activated_abilities:
-  - Eject the Bristle to a distance of Near
+    - Throw a bristle to Near
+    - Impale with the bristle to Deal 1 Physical Injury
   passive_abilities:
-  - Detect movement of anything Near
-  - Perceive detail of anything Close, as if you have sight of it
-  - Deal 1 Physical Injury to something peirced by the bristle
+    - Detect movement within Near
 - title: Snake Tail
   system: muscular
-  description: A scaled tail that is strong and flexible
+  description: A scaled tail that is strong and flexible and can choke out creatures
   activated_abilities:
-  - Reach to distance of Personal Space
-  - Bind something with your tail to grant the Restrained Condition
-  - Choke a creature to deal 1 Internal Injury
+    - Reach to Personal Space
+    - Grant the Restrained Condition to creatures you Strangle
+    - Strangle to Deal 1 Internal Injury
 - title: Cobra Fangs
   system: aromatic
-  description: A frilled head and fangs that produce venom
+  description: A frilled head and fangs that launch venom
   activated_abilities:
-  - Widen your frills to Grant the Frightened Condition to any creature that can see you
-  - Spit venom to a distance Near
+    - Reach to Close
+    - Throw venom to Near
+    - Bite to Deal 1 Physical Injury
   passive_abilities:
-  - Grant the Acidic Condition to anything your venom contacts
+    - Grant the Acidic condition to creatures that Touch the venom
 - title: Python Jaw
   system: aromatic
   description: A large jaw that can be dislocated with a sensitive forked tongue
   activated_abilities:
-  - Reach to a distance Close
-  - Dislocate your jaw to hide items up to 1 cubic meter in your body
-  - Digest something to grant it the Acidic Condition
+    - Reach to Close
+    - Dislocate your jaw to hide items up to 1 cubic meter in your body
+    - Grant the Acidic Condition to creatures you Digest
 - title: Acrobat's Legs
   system: muscular
   description: Legs that can perform, jump, and dance
   activated_abilities:
-  - Jump to a height Close
-  - Run to a distance Near
-  - Dance to Grant the Impressed Condition to a creature that can see you
+    - Jump to Close
+    - Run to Near
+    - Grant the Impressed Condition to creatures that See you perform
   passive_abilities:
   - Ignore the Prone Condition
 - title: Dextrous Hands
   system: muscular
-  description: Hands with aposable thumbs and fine motor skills
+  description: Hands with opposable thumbs and fine motor skills
   activated_abilities:
-  - Reach to a distance Close
-  - Use sleight of hand to Succeed
-  - Use a tool to Succeed
+    - Reach to Close
+    - Use sleight of hand to reduce a Challenge's difficulty by 2
+    - Use a tool to reduce a Challenge's difficulty by 2
   passive_abilities:
-  - Communicate silently using sign language
+    - Use sign language to communicate
 - title: Cheetah's Legs
   system: muscular
-  description: Strong legs that exhibit exceptional accelaration
+  description: Strong legs that exhibit exceptional acceleration and can pounce with formidable speed
   activated_abilities:
-  - Sprint to a distance Distant 
-  - Pounce to a distance Near without being seen or heard
+    - Run to Distant 
+    - Jump silently and invisibly to Near
 - title: Sharp Claws
   system: muscular
   description: Paws with razor sharp claws
   activated_abilities:
-  - Reach to a distance Close
-  - Slash to deal 1 Physical Injury
-  - Slash to deal 1 additional Injury to a Body Part that is from the Integumentary System
+    - Reach to Close
+    - Slash to Deal 1 Physical Injury
+    - Slash to Deal 1 Physical Injury to the Integumentary System
 - title: Aye Aye's Fingers
   system: muscular
-  description: A set of odd fingers, one long, one wide, one curled, two stuby
+  description: A set of odd fingers, one long, one wide, one curled, two stubby
   activated_abilities:
-  - Reach to a distance Close
-  - Tamper with technological devices to Succeed
-  - Use sleight of hand to succeed
+    - Reach to Close
+    - Use an electrical device to reduce a Challenge by 2
+    - Use sleight of hand to to reduce a Challenge by 2
   passive_abilities:
-  - Communicate silently using sign language
+    - Use sign language to Communicate
 - title: Cat's Claws
   system: muscular
-  description: Retractable Claws
+  description: Sharp retractable claws
   activated_abilities:
-  - Reach to a distance of Close
-  - Swipe to deal 1 Physical Injury
+    - Reach to Close
+    - Slash to Deal 1 Physical Injury
   passive_abilities:
-  - Take no Injuries from falling
-  - Retracting the claws makes them undectable by sight
+    - Ignore all Injuries from falling
 - title: Menacing Talons
   system: integumentary
   description: Long sharp curved Talons
   activated_abilities:
-  - Reach to a distance of Close
-  - Slice to deal 1 Physical Injury
-  - Slice to deal 1 additional Injury to a Body Part that is Part of the integumentary System
+    - Reach to Close
+    - Slash to Deal 1 Physical Injury
+    - Slash to Deal 1 Physical Injury to the Integumentary System
 - title: Bear Paws
   system: muscular
-  description: Huge strong paws with thick claws
+  description: Huge strong paws with thick claws and wide padded palms
   activated_abilities:
-  - Reach to a distance of Close
-  - Bash to deal 1 Physical Injury, instead of being Broken the Body Part becomes Obliterated
-  - Bash to deal 1 Additional Injury to a Body Part that is a part of the circulatory system
+    - Reach to Close
+    - Maul to Deal 1 Physical Injury
+    - Maul to Deal 1 Physical Injury to the Circulatory system
+  passive_abilities:
+    - When Injuring creatures with this Limb, Broken Body Parts are immediately Obliterated
 - title: Firefly Abdomen
   system: circulatory
-  description: A bulb that emits light
+  description: A bulb that emits light of different colours, it can create blinding light or illuminate an area.
   activated_abilities:
-  - Create a blinding light, granting the Blinded condition to anyone that sees it
+    - Grant the Blinded condition to creatures that see you Shine
   passive_abilities:
-  - Emit light to a distance of Distant
+    - Emit light to Distant
 - title: Horse Hooves
   system: integumentary
   description: Sturdy Hooves that can gallop and kick
   activated_abilities:
-  - Reach to a Distance Close
-  - Kick to deal 1 Physical Injury 
-  - Kick to grant the Prone Condition
-  - Gallop to a distance Distant
-  - Leap to a height of Close over a distance of Near
+    - Reach to Close
+    - Kick to Deal 1 Physical Injury 
+    - Grant the Prone Condition to creatures you Kick
+    - Run to Distant
+    - Jump to Near
 - title: Rabbit Feet
   system: muscular
-  description: Springy feet that brings luck
+  description: Springy feet with claws suited for digging.
   activated_abilities:
-  - Dig a hole in soil of 1 cubic metre in size
-  - Jump to a height of Near over distance of Near
-  - Give the GM 1 Hazard to get a benefit discussing the exact details with the GM
+    - Dig to Close
+    - Jump to Near
+    - Do something risky to reduce a challenge by 2
   passive_abilities:
-  - Ignore Conditions or Injuries from being buried.
+    - Ignore the Suffocating Condition from being buried.
 - title: Kangaroo Legs
   system: muscular
   description: Powerful Legs that jump high and kick hard
   activated_abilities:
-  - Jump to a height of Near over distance of Near
-  - Reach to a distance Close
-  - Kick to Deal 1 Physical Injury
-  - The target of a kick gets pushed back by a Distance of Near
+    - Jump to Near
+    - Reach to Close
+    - Kick to Deal 1 Physical Injury
+    - Shove to Near
 - title: Mole Paws
   system: muscular
   description: Curved claws good at digging
   activated_abilities:
-  - Tunnel Underground to a distance of Near
-  - Dig a hole in rock of 1 cubic metre in size
-  - Reach to distance Close
-  - Cut to deal 1 Physical Injury
+    - Dig to Near 
+    - Reach to Close
+    - Slash to Deal 1 Physical Injury
   passive_abilities:
-  - Ignore Conditions or Injuries from being Buried
+    - Ignore the Suffocating Condition from being buried
 - title: Mountain Goat Hooves
   system: integumentary
-  description: Wooly Legs and Hooves that can jump high and climb steep cliffs
+  description: Wooly Legs and Hooves that can traverse steep cliffs
   activated_abilities:
-  - Climb to a distance of Near
-  - You can jump to a height of Close over a distance of Near
+    - Climb to Near
+    - Jump to Near
   passive_abilities:
-  - Ignore the Freezing Condition
+    - Ignore the Freezing Condition
 - title: Bull Legs
   system: muscular
   description: Beastly Legs the size of trunks
   activated_abilities:
-  - Charge to a distance of Distant
-  - Hit something while charging to grant the Prone Condition
-  - Hit a creature while charging to deal 1 Physical Injury, instead of becoming Broken the Body Part becomes Obliterated
+    - Run to Distant
+    - Grant the Prone Condition to creatures you Trample
+    - Trample to Deal 1 Physical Injury
+    - When Injuring creatures with this Limb, Broken Body Parts are immediately Obliterated
 - title: Rhino Horn
   system: integumentary
-  description: A thick but pointy horn
+  description: A thick and pointy horn
   activated_abilities:
-  - Reach to a distance of Close
-  - Launch someone in the air to a distance of Near
-  - Peirce to Deal 1 Physical Injury
-  - Peirce to Deal 1 Additional Injury to a Body Part that is a member of the Endocrin system
+    - Reach to Close
+    - Shove to Near
+    - Impale to Deal 1 Physical Injury
+    - Impale to Deal 1 Physical Injury to the Endocrine system
 - title: Bat Patagium
   system: integumentary
   description: Thin Leathery wings with small hands on the end.
   activated_abilities:
-  - Fly a distance of Near vertically or horizontally
-  - Reach to a distance of Close
-  - Use sleight of hand to Succeed
+    - Fly to Near
+    - Reach to Close
+    - Use sleight of hand to reduce a challenge by 2
   passive_abilities:
-  - Communicate silently using sign language
+    - Use sign language to Communicate
 - title: Feathered Wings
   system: muscular
   description: Wings covered in water resistant feathers
   activated_abilities:
-  - Soar a distance of Near vertically or horizontally
+    - Fly to Near
   passive_abilities:
-  - Ignore the Acidic Condition
+    - Ignore the Acidic Condition from liquids
 - title: King Fisher Wings
   system: muscular
-  description: Slender wings feathered wings
+  description: Slender feathered wings adept at diving at rapid speeds
   activated_abilities:
-  - Fly a distance of Near vertically or horizontally
-  - Dive down from any height
-  - Rapidly drop onto a creature to Deal 1 Physical Injury
+    - Fly to Near
+    - Drop to Distant
+    - Slice to Deal 1 Physical Injury
 - title: Flying Fish Wings
   system: muscular
   description: Small membranous wings
   activated_abilities:
-  - Flitter a distance Near vertically or horizontally
-  - Swim a distance Near vertically or horizontally
+    - Fly to Near
+    - Swim to Near
 - title: Squid Tentacles
   system: muscular
   description: Long tentacles arrayed with suction cups
   activated_abilities:
-  - Reach to a distance Near
-  - Crawl to a distance of Distant
-  - Swim a distance of Near vertically or horizontally
+    - Reach to Near
+    - Climb to Near
+    - Swim to Near
 - title: Fish Fins
   system: muscular
-  description: Thin Scaled Fins
+  description: Thin Scaled Fins with gills
   activated_abilities:
-  - Swim a distance of Distant vertically or horizontally
+    - Swim to Near
   passive_abilities:
-  - Ignore the Suffocating Condition
+    - Ignore the Suffocating Condition from being drowned
 - title: Lionfish Fins
   system: integumentary
   description: Colourful and complex appendages that have many branches with poison barbs at the end
   activated_abilities: 
-  - Swim a distance of Near vertically or horizontally
-  - Perform to grant the Impressed Condition to a crature that can see you
-  - Reach a distance of Personal Space
-  - Prick something to grant the Acidic Condition
+    - Swim to Near
+    - Grant the Impressed Condition to creatures that See you Perform
+  passive_abilities:
+    - Grant the Acidic Condition to creatures that get within Personal Space of the barbs
 - title: Stonefish Spines
   system: integumentary
-  description: Strong pointy spines that are camoflagued on the body
-  activated_abilities: 
-  - Prick with the spines to grant the Poisoned Condition
-  - Reach to a distance of Personal Space
+  description: Strong pointy spines that are camouflaged on the body
+  activated_abilities:
+    - Use camouflage to reduce a Challenge's difficulty by 2
+  passive_abilities: 
+    - Grant the Poisoned Condition to creatures that get within Personal Space of the spines
 - title: Owl Talons
   system: integumentary
-  description: Shredding Talons that can hold things
+  description: Shredding Talons that can carry heavy items with its strong grip
   activated_abilities:
-  - Reach to a distance Close
-  - Slash to deal 1 Physical Injury
-  - Slash to Deal 1 Additional Physical Injury to a body Part that is part of the integumentary System
-  - You can pick up things much larger in size by gripping your claws into it
+    - Reach to Close
+    - Snatch to Deal 1 Physical Injury
+    - Snatch to Deal 1 Physical Injury to the Integumentary System
 - title: Lyre Bird Voice Box
   system: aromatic
-  description: A voice box that can perfectly mimic any surrounding
+  description: A voice box that can perfectly mimic any sound
   activated_abilities:
-  - Choose to Grant the Charmed, Impressed, or Frightened Condition to anyone that can hear you
-  - Your voice can make inuadible frequencies to the humans of ancient times
-  - Lie or Persuade to Succeed
+    - Grant the Charmed, Impressed, or Frightened Condition to creatures that Hear you Sing
+    - Use mimicry of sound to reduce a Challenge by 2
 - title: Wolf Muzzle
   system: aromatic
-  description: Feral jaws that bite and howl
+  description: Feral jaws that bite and howl, the howl can be modulated to make the sound of five creatures
   activated_abilities:
-  - Reach to a distance Close
-  - Bite to deal 1 Physical Injury
-  - Bite to deal 1 additional Injury to a Body Part that is from the muscular system
-  - Howl to grant the Frightened Condition to creatures that can hear you
-  passive_abilities:
-  - You can appear to sound as if there are multiple of you when making noises
+    - Reach to Close
+    - Bite to Deal 1 Physical Injury
+    - Bite to Deal 1 Physical Injury to the Muscular system
+    - Grant the Frightened Condition to creatures that Hear you Growl
 - title: Lion Jaws
   system: aromatic
-  description: Huge jaws with strong teeth, a snout with long whiskers
+  description: Huge jaws with strong teeth, a snout with long whiskers and a mighty roar
   activated_abilities:
-  - Reach to a distance of Close
-  - Deal 1 Physical Injury, instead of being Broken the Body Part becomes Severed
-  - You can feel anything close to you as if you can 'see' it
-  - Roar to grant the Deafened condition to any creature that can hear
+    - Reach to Close
+    - Gnaw to Deal 1 Physical Injury
+    - Detect movement to Near
+    - Grant the Deafened condition to creatures that Hear you Roar
+  passive_abilities:
+    - When Injuring creatures with this Limb, Broken Body Parts are immediately Obliterated
 - title: Crocodile Jaws
   system: aromatic
   description: A narrow snout lined with sharp rows of teeth
   activated_abilities:
-  - Reach to a distance of Close
-  - Shred to deal 1 Physical Injury, instead of being Broken the Body Part becomes Severed
-  - Shred to Deal 1 Additional Injury to a Body Part that is a part of the muscular system
-  - lock your jaws to grant the Restrained Condition
+    - Reach to Close
+    - Gnaw to Deal 1 Physical Injury
+    - Gnaw to Deal 1 Physical Injury to the Muscular system
+    - Use camoflague to reduce a Challenge's diffculty by 2
+  passive_abilities:
+    - When Injuring creatures with this Limb, Broken Body Parts are immediatly Severed
 - title: Elephant Trunk
   system: aromatic
-  description: A long nose that is flexible and can hold liquids
+  description: A long nose that is flexible and can hold and eject liquids
   activated_abilities:
-  - Shoot liquids from the trunk up to a distance of Distant
-  - Reach up to a distance of Near
+    - Throw to Distant
+    - Reach to Near
   passive_abilities:
-  - Communicate without speaking and silently using sign language
+    - Use sign language to Communicate
 - title: Hippopotamus Mouth
   system: aromatic
   description: Large crushing jaws with tusks
   activated_abilities:
-  - Reach a distace of Close
-  - Chomp to dDeal 1 Physical Injury, instead of being Broken the Body Part becomes Obliterated
-  - Chomp to deal 1 additional Injury to a Body Part that is part of the endocrine system
+  - Reach to Close
+  - Gnaw to Deal 1 Physical Injury
+  - Gnaw to Deal 1 Physical Injury to the Endocrine system
+  passive_abilities:
+    - When Injuring creatures with this Limb, Broken Body Parts are immediatly Obliterated
 - title: Jaguar Head
   system: thought
   description: A head with the mind and teeth of a stealthy creatures
   activated_abilities:
-  - You can become invisible, preventing detection by sight
-  - Reach a distance of Close
+  - Use camoflague to reduce a Challenge's diffculty by 2
+  - Reach to Close
   - Bite to Deal 1 Physical Injury
   passive_abilities:
-  - Ignore Injuries from falling
+  - Ignore 3 Injuries from falling
 - title: Hyena Snout
   system: aromatic
-  description: A dirty snout that makes horrid giggles
+  description: A dirty snout that makes horrid giggles, The giggles can be modulated to make the sound of five creatures
   activated_abilities:
-  - Grant the Confused Condition to creatues that hear you when giggling
-  - You can appear to sound as if there are multiple of you when making noises
-  - Reach a distance of Close
-  - Deal 1 Physical Injury, instead of being broken the Body Part is Obliterated
+  - Grant the Confused Condition to creatures that Hear you Giggle
+  - Reach to Close
+  - Bite to Deal 1 Physical Injury
+  passive_abilities:
+    - When Injuring creatures with this Limb, Broken Body Parts are immediatly Obliterated
 - title: Frog Tongue
   system: aromatic
   description: A long sticky tongue
   activated_abilities:
-  - Reach a distance of Distant
-  - Use sleight of hand to Succeed
-  passive_abilities:
-    - Your tongue can stick to anything
+  - Reach to Distant
+  - Shove to Distant
+  - Use sleight of hand to reduce a Challenge's difficulty by 2
 - title: Slow Brain
   system: thought
   description: A brain that is good in other ways
   activated_abilities:
-  - Give the GM 1 Hazard to get a benefit discussing the exact details with the GM
-  - Do something unexpected to grant the Confused Condition
+  - Do something ridiculous to reduce a Challenge's difficulty by 2
+  - Grant the Confused Condition to creatures you Touch
   passive_abilities:
   - Ignore the Confused condition
 - title: Big Brain
   system: thought
   description: A brain that has knowledge of various specialist topics
   activated_abilities:
-  - Use your knowledge of Chemicals, and Physics to succeed
-  - Tamper with technological devices to succeed
-  - Persuade to succeed
+  - Use Chemistry or Physics to reduce a Challenge's difficulty by 2
+  - Use electrical devices to reduce a Challenge's difficulty by 2
+  - Use Persuasion to reduce a Challenge's difficulty by 2
 - title: Superior Brain
   system: thought
   description: A brain that exhibits mastery over others
   activated_abilities:
-  - Use your knowledge of Biology and Chemicals to Succeed
-  - Persuade to Succeed
-  - Deduct to Succeed
+  - Use Biology or Physics to reduce a Challenge's difficulty by 2
+  - Use Arrogance to reduce a Challenge's diffculty by 2
+  - Use Deduction to reduce a Challenge's difficulty by 2
 - title: Split Brain
   system: thought
-  description: A Brain that understands the contradiction and dissonance of reality
+  description: A Brain that understands the contradiction and dissonance of reality, you can communicate twice as much in half the time.
   activated_abilities:
-  - Lie to Succeed
-  - You can appear to sound as if there are multiple of you when making noises
-  - Use your knowledge of Biology to Succeed
+  - Use Deception to Reduce a Chllenge's difficulty by 2
+  - Use Biology or Chemistry to reduce a Challenge's difficulty by 2
 - title: Prescient Brain
   system: thought
   description: A brain with hyper awareness and uncanny powers of prediction
   activated_abilities:
-  - Deduct to Succeed
-  - Select a single target, you can determine precisly what will occur in the next minute
+  - Use Deduction to reduce a Challenge's difficulty by 2
+  - Choose a Creature, you can determine what Limb the creature will Activate on their Turn
 - title: Tactical Brain
   system: thought
   description: A brain that is a master of strategy and problem solving 
   activated_abilities:
-  - Use your knowledge of Biology and Physics to Succeed
-  - You may prepare yourself to execute an Action immedialty after another's action of your choice
-  - If you deal an Injury, instead of being Broken the Body Part becomes Severed
+  - End you turn immediatly. Execute the rest of this limb immedialty after another's Turn of your choice
+  - Use Intimidation to Reduce a Chellenge's Difficult by 2
+  passive_abilities:
+    - When Injuring creatures with this Limb, Broken Body Parts are immediatly Severed
 - title: Social Brain
   system: thought
   description: A brain that loves the party and other creatures
   activated_abilities:
-  - Do something cool to grant the Charmed Condition
-  - Persuade or Lie to Succeed
+  - Grant the Charmed Condition to creatures that See you Perform
+  - Use Persuasion to reduce a Challenge's difficulty by 2
 - title: Adrenal Gland
   system: endocrine
   description: A Gland that releases a energy inducing hormone
   activated_abilities:
-  - You can sprint a distance of Distant
-  passive_abilities:
-  - Gain an additional Action
+  - Run to Distant
+  - End you turn immediatly. Execute the rest of this limb immedialty after another's Turn of your choice
 - title: Tough Skin
   system: integumentary
   description: Thick rough Skin that provides protection
@@ -462,51 +462,50 @@ body_parts:
   system: integumentary
   description: Furry skin that is very strong
   passive_abilities:
-  - Ignore 1 Physical or Internal Injury
+  - Ignore 1 Physical Injury
   - Ignore the Acidic Condition
 - title: Chameleon Skin
   system: integumentary
   description: Skin that can display varying magnificent colours
   activated_abilities:
-  - You can become invisible, preventing detection by sight
-  - Create dazzling colours to grant the Charmed Condition
+  - Use Camoflague to reduce a Challenge's difficult by 2
+  - Grant the Charmed Condition to creatures that See you Shine
 - title: Eel's Electric Organ
   system: circulatory
-  description: An organ that emits shocking electrical strikes
+  description: An organ that emits shocking electrical strikes that can travel through conductive material
   activated_abilities:
-  - Electrocute something to Deal 1 Internal Damage, the electricity travels through conductive material
-  - Swim a distance of Distant vertically or horizontally
+  - Electrocute to Deal 1 Internal Injury
+  - Swim to Distant
   passive_abilities:
-  - Ignore Injuries from being electrocuted
+  - Ignore all Injuries from being electrocuted
 - title: Poison Gland
   system: endocrine
   description: A gland that produces a liquid poison
   activated_abilities:
-  - Produce 100ml of Poison
+  - Produce a bottle of Poison
   passive_abilities:
-  - Grant the Poisoned Condition to anything that is contact with the poison
+  - Grant the Poisoned condition to creatures that Touch the poison
 - title: Cat's Heart
   system: circulatory
   activated_abilities:
-  - Give the GM 1 Hazard to get a benefit discussing the exact details with the GM
+    - Do something risky to reduce a Challenge's difficulty by 2
   passive_abilities:
   - You can exchange an Internal Injury for a Physical Injury
-  - If a Body Part were to be Severed or Obliterated it instead becomes Broken
+  - When Injured Obliterated Body Parts are immediatly Broken
 - title: Mole's Star-Nose
   system: aromatic
   description: An ugly but powerful nose that can detect slight aromas
   activated_abilities: 
-  - Flair your nose to Grant the Disgusted Condition to any creature that sees you
+  - Grant the Disgusted Condition to creatures that See you Perform
   passive_abilities:
-  - You can perceive detail of anything Close to you as if you have sight of it
-  - You can locate anything you can smell as if you have sight of it
+  - Smell the precise location of creatures within Distant
 - title: Stink Gland
   system: endocrine
   description: A gland that produces an aresol of pungent odour
   activated_abilities:
   - Disperse a Pungent Smell to a distance of Near
   passive_abilities:
-  - A creature that smells the aerosol is granted the Disgusted Condition
+    - Grant the Disgusted Condition to creatures that Smell the aresol
 - title: Mantis Eyes
   system: sight
   description: Eyes that can see light outside the visible spectrum
@@ -519,15 +518,15 @@ body_parts:
   description: A forked tongue that is sensitive to chemicals in the air
   activated_abilities:
   - You can accuratley determine the indegrediants to anything you taste
-  - Lie to Succeed
+  - Use Deception to Reduce a Challenge's difficulty by 2
   passive_abilities:
-  - You can taste the stench of creatures up to distance of Near as if you can 'see'
+  - Smell the precise location of creatures within Distant
 - title: Eagle Eyes
   system: sight
-  description: "Powerful eyes that can inspect great detail"
+  description: Powerful eyes that can inspect intricate detail
   activated_abilities:
   - You may prepare yourself to execute an Action immedialty after another's action of your choice
-  - Deal 1 Additional Injury to anything you attack
+  - Use your sight to reduce a Challenge's difficulty by 2
 - title: Bat Ears
   system: auditory
   description: Sensitive ears capable of echolocation
@@ -538,24 +537,23 @@ body_parts:
   system: aromatic
   description: A loud voice box with a beautiful something
   activated_abilities:
-  - Sing loudly to grant the Deafened Condition to any that can hear you
-  - Sing a melody to grant the Charmed Condition to any that can hear you
+  - Grant the Deafened, or Charmed Condition to creatures that Hear you Sing
   passive_abilities:
   - You can locate any creature by sound as if you can 'see' them
 - title: Sensitive Ears
   system: auditory
   description: Ears capable of detecting the slightest of sonic detail
   activated_abilities: 
-  - Listen intently to Succeed
+  - Use your sense of Hearing to reduce a Challenge's difficulty by 2
   passive_abilities:
-  - You can locate any creature by sound as if you can 'see' them
+  - Echolocate within Distant
 - title: Short Horned Lizard Eyes
   system: sight
   description: Red bulbous eyes that squirt blood from its orifice
   activated_abilities:
-  - Squirt blood to a distance of Near
+  - Throw blood to Near
   passive_abilities:
-  - The blood grants the Acidic Condition to anything that touches it
+  - Grant the Acidic Condition to creatures that Touch the blood
   - Ignore the Boiling Condition
 - title: Oppossum Bone Marrow
   system: circulatory
@@ -567,18 +565,19 @@ body_parts:
   system: auditory
   description: Large ears leathery ears
   passive_abilities:
-  - You can locate any creature by sound as if you can 'see' them
+  - Echolocate within Distant
   - Ignore the Boiling Condition
 - title: Bombadier Beetle Chamber
   system: endocrine
   description: An organ that creates a hard shelled explosive ball
   activated_abilities:
-  - Create an explosive shell 
+  - Produce an explosive shell 
   passive_abilities:
-  - On Impact the shell explodes granting the Burning Condition to anything Close to it
+  - Detonate the shell
+  - Grant the Burning Condition to Creatures that get within Close of the shell
 - title: Turtle shell
   system: integumentary
-  description: A Hard shell that is near impentrable
+  description: A Hard shell that is near impenetrable
   activated_abilities:
   - Retract into your shell
   passive_abilities:
@@ -588,10 +587,9 @@ body_parts:
   system: integumentary
   description: Long hard spikes
   activated_abilities:
-  - Reach to a distance of Personal Space
-  - Prick to Deal 1 Physical Injury
+  - Reach to Personal Space
   passive_abilities:
-  - Anything that gets within Personal Space is pricked by the Spines and dealt 1 Physical Injury
+  - When a creature gets within Personal Space Deal 1 Physical Injury
 - title: Marsupial Pouch
   system: integumentary
   description: A pouch that can keep things warm
@@ -606,28 +604,27 @@ body_parts:
   activated_abilities:
   - Reach to a distance of Close
   - Bite to deal 1 Physical Injury
-  - Bite to deal 1 Additional Injury to a Body Part that is a member of the circulatory system
+  - Bite to deal 1 Physical Injury to the Circulatory system
 - title: Pointed Fangs
   system: aromatic
   description: Long spiked teeth
   activated_abilities:
   - Reach to a distance of Close
-  - Bite to deal 1 Physical Injury
-  - Bite to deal 1 Additional Injury to a Body Part that is a member of the endocrine system
+  - Bite to Deal 1 Physical Injury
+  - Bite to Deal 1 Physical Injury to the Endocrine system
 - title: Gnawing Jaws
   system: aromatic
   description: Solid molars that grind materials
   activated_abilities:
-  - Reach to a distance of Close
-  - Gnaw to deal 1 Physical Injury
-  - Gnaw to deal 1 Additional Injury to a Body Part that is a member of the muscular system
+  - Reach to Close
+  - Gnaw to Deal 1 Physical Injury
+  - Gnaw to Deal 1 Physical Injury to The Muscular system
 - title: Gecko Toe Pads
   system: integumentary
-  description: Scales that interact pecularily with surface tension
+  description: Scales use surface tension to stick to walls and run on liquid
   activated_abilities:
-  - Run a distance of Near
-  - You can Sprint on water to a distance of Distant
-  - Climb walls to a height of Near
+  - Run to Near
+  - Climb to Near
 - title: Lizard Flesh
   system: circulatory
   description: Flesh that can disconnect from the Body and regenerated
@@ -637,21 +634,21 @@ body_parts:
   - Broken, Obliterated or Severed Body Parts can be regenerated after an hour
 - title: Pufferfish Air Bag
   system: circulatory
-  description: A body that can inflate to 3 times its size covered in needles
+  description: A body that can inflate to three times its size covered in needles
   activated_abilities:
-  - Reach to a distance of Personal Space 
-  - Inflate to extend your Reach to Near
+  - Inflate to make your Personal Space encompass Near
   passive_abilities:
-  - When inflanted grant yourslef the Restrained Condition
-  - Anything within the space of the spines is granted the Poisoned Condition
+    - Grant the Restrained Condition to yourself when you are inflated
+    - Grant the Poisoned Condition to creatures that get within Personal Space of the spines
 - title: Camel Stomach
   system: endocrine
-  description: A stomach filled with acid that can be ejected to cool off
+  description: A stomach filled with acidic spit that can be thrown up to cool off.
   activated_abilities:
-  - You can spit up to a distance of Near
+  - Throw to Near
+  - Produce a bottle of spit
   passive_abilities:
   - Ignore the Boiling Condition  
-  - The spit grants the Acidic Condition to anything it touches
+  - Grant the Acidic Condition to creatures that Touch the spit
 - title: Decorator Crab shell
   system: integumentary
   description: A Hard shell decorated with treasure and trash
@@ -664,56 +661,61 @@ body_parts:
   system: integumentary
   description: A marvelous bouquet of colourful feathers
   activated_abilities:
-  - Ruffle your feathers to grant the Impressed Condition or the Charmed Condition to creatures that can see you
-  - Persuade and Lie to Succeed
+  - Grant the Impressed, or Charmed Condition to creatures that See you Perform
+  - Use Seduction to reduce a Challenge's Difficulty by 2
 - title: Porcupine Quills
   system: integumentary
-  description: Pointy quills adorne your body
+  description: Pointy quills adorne your body that can be ejected at incredible speeds
   activated_abilities:
-  - Launch a quill a distance of Near
+  - Reach to Near
+  - Throw to Near
   passive_abilities:
   - Prick anything that enter poersonal space of the quills
 - title: Skunk Butt
   system: endocrine
   description: A Stink gland that produces a pungent liquid
   activated_abilities:
-  - Produce a litre of pungent liquid
+  - Produce a bottle of liquid
   passive_abilities:
-  - Grant the Disgusted Condition to anything that can smell the liquid
+  - Grant the Disgusted Condition to creatures that Smell the liquid
 - title: Blow hole
   system: circulatory
   description: A cavity that ejects vast amount of liquid
   activated_abilities:
-  - Launch a beam of liquid to a distance of Distant
-  - Luanch a flood of liquid to a distance of Near, anyone hit gains the Prone Condition
+  - Throw to Distant
+  - Grant the Prone Condition to creatures that Touch the liquid
   passive_abilities:
-  - Ignore the Suffocating Condition
+  - Ignore the Suffocating Condition from drowning
 - title: Sugar Glider Patagium
   system: integumentary
   description: Fur Covered skin flabs that allow for gliding
   activated_abilities:
-  - Glide Horizontally in Air up to a distance of Distant
+  - Glide to Distant
   passive_abilities:
-  - Ignore Injuries from falling
+  - Ignore all Injuries from falling
 - title: Mosquito Proboscis
   system: circulatory
   description: sucking probe that draw blood from the wounded
   activated_abilities:
-  - Reach a distance of Close
-  - Suck Blook to deal 1 Internal Injury
+  - Reach to Close
+  - Impale to Deal 1 Internal Injury
   - Suck to heal a Body Part by 1 Disrepair that is a member of the endocrine or aromatic system
 - title: Crab Pincers
   system: muscular
   description: Pincers with incredible strength at snapping
   activated_abilities:
-  - Reach a distance of Close
-  - Pince to deal 1 Physical Injury, instead of being Broken the Body Part becomes Severed
+  - Reach to Close
+  - Slice to Deal 1 Physical Injury
+  passive_abilities:
+    - When Injuring creatures with this Limb, Broken Body Parts are immediatly Severed
 - title: Wolverine Claws
   system: integumentary
   description: Paws with razor sharp claws
   activated_abilities:
-  - Reach a distance of Close
-  - Slah to deal 1 Physical Injury, instead of being Broken the Body Part becomes Severed
+  - Reach to Close
+  - Slash to Deal 1 Physical Injury
+  passive_abilities:
+    - When Injuring creatures with this Limb, Broken Body Parts are immediatly Severed
 
 
 

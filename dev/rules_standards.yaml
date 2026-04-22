@@ -5,7 +5,11 @@ glossary:
     - Climb
     - Swim
     - Dig
+    - Roll
     - Fly
+    - Glide
+    - Drop
+    - Squeeze
   distance:
     - Personal Space
     - Close
@@ -15,9 +19,17 @@ glossary:
   range:
     - Reach
     - Throw
+    - Shove
   injury:
     - Physical
     - Internal
+  disrepair:
+    - Healthy
+    - Scarred
+    - Septic
+    - Broken
+    - Obliterated
+    - Severed
   body_system:
     - Visual
     - Auditory
@@ -50,13 +62,44 @@ glossary:
     - See
     - Smell
     - Hear
+    - Detect movement
+    - Touch
+    - Echolocate
+  action:
+    - Slash
+    - Electrocute
+    - Perform
+    - Strangle
+    - Impale
+    - Kick
+    - Punch
+    - Maul
+    - Trample
+    - Slice
+    - Snatch
+    - Bite
+    - Find
+    - Gnaw
+    - Consume
+    - Perform
+    - Shine
+    - Roar
+    - Digest
+    - Growl
+    - Giggle
+    - Sing
+    - Digest
 templates:
-  movement: '^({movement})( .*)? to ({distance})$'
-  range: '^({range}) to ({distance})$'
-  deal_injury: '^Deal \d+ ({injury}) Injury( (to the ({body_system}) system))?$'
-  ignore_injury: '^Ignore \d+ ({injury}) Injury( (to the ({body_system}) system)|(to this Limb) )?$'
-  grant_condition: '^Grant the ({condition}) condition( (except|for|from)(.*))?$'
-  ignore_condition: '^((This {scope} Ignores)|(Ignore)) the ({condition}) condition( (except|for|from)(.*))?$'
-  senses: '^({sense})( .*)? within ({distance})$'
+  movement: '^{movement}( .+)? to {distance}$'
+  range: '^{range}( .+)? to {distance}$'
+  deal_injury: '^{action}( with the .*)? to Deal \d+ {injury} Injury( (to the {body_system} system))?$'
+  passive_deal_injury: '^When a creature (gets within {distance}) Deal \d {injury} Injury|Injuries$'
+  ignore_injury: '^Ignore (\d+|all)( {injury})? (Injury|Injuries)( (to the ({body_system}) system|to this Limb|from .*))?$' 
+  disrepair: '^(When Injuring creatures with this Limb,)|(When Injured) {disrepair} Body Parts are immediatly {disrepair}?$'
+  grant_condition: '^Grant the ({condition}(,( or)?)? )+Condition to (creatures (that {sense} you {action}|you {action}|that {sense} the .+|you {sense}|((that get)? within {distance}( of the .*)?))|yourself when .+)$'
+  ignore_condition: '^((This {scope} Ignores)|(Ignore)) the ({condition}) condition( ((except|for|from|while)(.*)|to this Limb))?$'
+  senses: '^{sense}( .*)? within {distance}$'
+  challenge: "^Use|Do .* to reduce a Challenge's difficulty by \\d+$"
+  communiciation: "^Use .* to Communicate$"
 
 

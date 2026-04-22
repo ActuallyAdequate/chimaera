@@ -18,41 +18,46 @@ Each Body Part has three elements which describe its behaviour.
 
 ## Key Terms
 
-### Reach
+### Movement
 
-# Reach specifies the distance that a Body Part's Ability effects. Such as being able to launch something to a distance of Near. Or Spikes reaching a distance of Personal Space. This means that the target must be within that distance to be affected.
+Movement describes the distance a creature cna traverse land, air, or sea. There
+a different types of movement.
 
-Attaching a Body Part to another Body Part inherits that Reach of the Body Part
-it is attached to, unless the attached Body Part also specifies its own Reach.
-For example Attaching a Body Part that doesn't specify its own Reach will have
-the default reach of the Body of Personal Space. But if it specifies its own
-Reach such as Near then it has a Reach of Near.
+- **Run:** Movement across land
+- **Jump:** Movement horizontally and vertically through the air, but beginning
+  and ending on land
+- **Climb:** Movement on walls and ceilings
+- **Swim:** Movement on or in liquid
+- **Dig:** Movement through soft material
+- **Roll:** Unpowered Movement on flat or declined land
+- **Fly:** Movement horizontally and vertically through air
+- **Glide:** Unpowered Movement horizontally and downward through air
+- **Drop:** Movement downward thorugh air or liquid
+- **Squeeze:** Movement through tight spaces about the size of a keyhole
 
-### Succeed
+> [!INFO] Challenging Movement Sometime Movement is Challenging, this means that
+> in order to move the Creature must execute a Challenge. Some Examples of
+> Challenging Movement:
+>
+> - Running in Mud
+> - Swim in a current
+> - Digging in coarse material
 
-When an Ability says you Succeed at a particular activity this means you can do
-so without being challenged as per the Hazard rules.
+### Range
 
-### Grant and Ignore Conditions
+Range specifies the distance that a Body Part's Ability effects. Such as being
+able to Throw something to a distance of Near. Or Spikes being able to Reach a
+distance of Personal Space. This means that the target must be within that
+distance to be affected.
 
-Some Abilities grant conditions on other creatures. When Activated the target
-will gain the Condition according to the Conditions rules
+Attaching a Body Part to another Body Part inherits that Range of the Body Part
+it is attached to, unless the attached Body Part also specifies its own Range.
+For example Attaching a Body Part that doesn't specify its own Range will have
+the default range of the Body of Personal Space. But if it specifies its own
+Rnage such as Near then it has a Range of Near.
 
-Ignoring Conditions is done continuously and doesn't require Activating the Body
-Part. When a Condition would be applied to you that you can Ignore. Then you
-don't have the Condition.
+There a different types of Range
 
-### Ignore or Deal an Injury
-
-When Dealing an Injury choose which Body Part of the Target you would like to
-attack, then increase its Disrepair by the amount of Injuries dealt.
-
-When Taking an Injury choose which of your Body Parts takes the Injury, and
-increase its Disrepair by the amount of Injuries dealt.
-
-Some Body Part allows you to ignore 1 more injuries of a certain type either
-Physical or Internal. This allows you to reduce the number of Injuries taken
-each time you are targeted by another's Action. For example if a Creature
-executes two Abilities, that both Deal 1 Physical Damage, and you have a Body
-Part that allows you to Ignore 1 Physical Damage. Then You will only take 1
-Physical Damage.
+- **Reach:** Represents melee range
+- **Throw** Represents the range of something thrown
+- **Shove** Represents the range of you can move another creature
