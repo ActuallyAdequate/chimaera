@@ -18,16 +18,13 @@ Below are some examples of Action Goals:
 
 ## Actions and Body Parts
 
-<<<<<<< Updated upstream
-To execute the action you must Activate a Limb. All Body Parts that are a member of the limb are Activated. The player must then describe how the Mutated use all the connected Body Parts to achieve the goal.
-=======
-To execute the action you will choose a Limb this will will Activate all the
-Body Parts that are part of that limb. The player must then describe how the
-Mutated use the connected Body Parts to achieve the goal. **The Order of the
-Body Parts in the limb is important**. THe description must mention each Body
-Part in the order that they are present in the limb, starting from the Body Part
-that is directly attached to the Body and ending with the Peripheral Body Part.
->>>>>>> Stashed changes
+To execute the action you will choose a Limb that has **no Broken Body Parts**,
+this will Activate all the Body Parts that are part of that limb. The player
+must then describe how the Mutated use the connected Body Parts to achieve the
+goal. **The Order of the Body Parts in the limb is important**. The description
+must mention each Body Part in the order that they are present in the limb,
+starting from the Body Part that is directly attached to the Body and ending
+with the Peripheral Body Part.
 
 > Imagine a creature with a Poison Gland Body Part, and their task is to poison
 > a tyrant. There are different ways that this could be achieved depending on
@@ -48,17 +45,12 @@ that is directly attached to the Body and ending with the Peripheral Body Part.
 > flying high, then shoot their bristles into the creature and inject poison
 > into it's blood stream all in one Action.
 
-<<<<<<< Updated upstream
->[!IMPORTANT]
-> Notice how the order of the Body Parts effect the way the action is resolved. When the Cheetah Legs are Activated, the action is modified by the Poison Gland by leaving a trail behind. However, when it is the Poison Gland that is directly connected to the Body, the action is modified by the Cheetah Legs resulting in rolling globules of poison.
-=======
 > [!IMPORTANT]
 > Notice how the order of the Body Parts effect the way the actions is resolved.
 > When the Cheetah Legs are first, the action is modified by the Poison Gland by
 > leaving a trail behind. However, when it is the Poison Gland that is directly
 > connected to the Body, the action is modified by the Cheetah Legs resulting in
 > rolling globules of poison.
->>>>>>> Stashed changes
 
 ## Activating Body Parts
 
@@ -70,5 +62,4 @@ that is directly attached to the Body and ending with the Peripheral Body Part.
 - The Body Part 6 is a Peripheral Limb and so must be last in in the description
   if it is chosen
 - Activating Limb with Body Part 4 doesn't Activate any additional Body Parts.
-- Activating Limb with Body Part 2 requires both Body Part 2 and then Body Part
-  7 to be in the description
+- Body Part 7 is Broken, therefore the Limb it is part of cannot be Activated

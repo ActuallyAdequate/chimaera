@@ -10,20 +10,20 @@ body:
   system: sight
   description: Eyes that can see the 300-780nm spectrum of light
   passive_abilities:
-    - See Afar in full light
-    - See Near in dim light
+    - See in full light within Afar
+    - See in dim light within Near
 - title: Ears
   system: auditory
   description: Ears that can hear between 20hz and 20000hz
   passive_abilities: 
-- You can hear loud noises
+- Hear loud noises within Distant
 - title: Snout
   system: aromatic
   description: A Mouth with a tongue a set of incisors, canines and molars.
   passive_abilities:
     - Use your voice to Communicate
-    - Smell pungent odours
-    - Taste spiced flavours
+    - Smell pungent odours within Near
+    - Taste spiced flavours within Personal Space
 - title: Limbs
   system: muscular
   description: Appendages that can be manipulated
@@ -31,7 +31,6 @@ body:
     - Reach to Close
     - Walk to Near
     - Float to Near
-    - Punch to Deal 1 Physical Injury
     - Pick up and handle an object
 - title: Brain
   system: thought
@@ -69,7 +68,7 @@ body_parts:
   system: thought
   description: An amorphous cranium covered in skin that can change colours
   activated_abilities:
-    - Use camouflage to reduce a Challenge's difficulty by 2
+    - Use camouflage to reduce a Challenge's Difficulty by 2
     - Squeeze to Near
 - title: Starfish Ray
   system: circulatory
@@ -82,11 +81,10 @@ body_parts:
   system: endocrine
   description: Produce a thread that has bioluminescent properties, that can create a pulsating light
   activated_abilities:
-    - Produce an arms-length of thread
+    - Excrete a coil of thread
     - Grant the Charmed condition to creatures that See the pulsating light
   passive_abilities:
-    - The thread expels light up to distance of Distant
-    - The thread can be snapped when it takes 1 Physical Injury
+    - The thread Emits light to Distant
 - title: Jellyfish Bell
   system: thought
   description: A transparent soft umbrella like head with tentacles that can send out an electrical shot
@@ -141,8 +139,8 @@ body_parts:
   description: Hands with opposable thumbs and fine motor skills
   activated_abilities:
     - Reach to Close
-    - Use sleight of hand to reduce a Challenge's difficulty by 2
-    - Use a tool to reduce a Challenge's difficulty by 2
+    - Use sleight of hand to reduce a Challenge's Difficulty by 2
+    - Use a tool to reduce a Challenge's Difficulty by 2
   passive_abilities:
     - Use sign language to communicate
 - title: Cheetah's Legs
@@ -213,7 +211,7 @@ body_parts:
   activated_abilities:
     - Dig to Close
     - Jump to Near
-    - Do something risky to reduce a challenge by 2
+    - Do something risky to reduce a Challenge's Difficulty by 2
   passive_abilities:
     - Ignore the Suffocating Condition from being buried.
 - title: Kangaroo Legs
@@ -312,7 +310,7 @@ body_parts:
   system: integumentary
   description: Strong pointy spines that are camouflaged on the body
   activated_abilities:
-    - Use camouflage to reduce a Challenge's difficulty by 2
+    - Use camouflage to reduce a Challenge's Difficulty by 2
   passive_abilities: 
     - Grant the Poisoned Condition to creatures that get within Personal Space of the spines
 - title: Owl Talons
@@ -342,7 +340,7 @@ body_parts:
   activated_abilities:
     - Reach to Close
     - Gnaw to Deal 1 Physical Injury
-    - Detect movement to Near
+    - Detect movement within Near
     - Grant the Deafened condition to creatures that Hear you Roar
   passive_abilities:
     - When Injuring creatures with this Limb, Broken Body Parts are immediately Obliterated
@@ -397,12 +395,12 @@ body_parts:
   activated_abilities:
   - Reach to Distant
   - Shove to Distant
-  - Use sleight of hand to reduce a Challenge's difficulty by 2
+  - Use sleight of hand to reduce a Challenge's Difficulty by 2
 - title: Slow Brain
   system: thought
   description: A brain that is good in other ways
   activated_abilities:
-  - Do something ridiculous to reduce a Challenge's difficulty by 2
+  - Do something ridiculous to reduce a Challenge's Difficulty by 2
   - Grant the Confused Condition to creatures you Touch
   passive_abilities:
   - Ignore the Confused condition
@@ -410,33 +408,33 @@ body_parts:
   system: thought
   description: A brain that has knowledge of various specialist topics
   activated_abilities:
-  - Use Chemistry or Physics to reduce a Challenge's difficulty by 2
-  - Use electrical devices to reduce a Challenge's difficulty by 2
-  - Use Persuasion to reduce a Challenge's difficulty by 2
+  - Use Chemistry or Physics to reduce a Challenge's Difficulty by 2
+  - Use electrical devices to reduce a Challenge's Difficulty by 2
+  - Use Persuasion to reduce a Challenge's Difficulty by 2
 - title: Superior Brain
   system: thought
   description: A brain that exhibits mastery over others
   activated_abilities:
-  - Use Biology or Physics to reduce a Challenge's difficulty by 2
-  - Use Arrogance to reduce a Challenge's diffculty by 2
-  - Use Deduction to reduce a Challenge's difficulty by 2
+  - Use Biology or Physics to reduce a Challenge's Difficulty by 2
+  - Use Arrogance to reduce a Challenge's Difficulty by 2
+  - Use Deduction to reduce a Challenge's Difficulty by 2
 - title: Split Brain
   system: thought
   description: A Brain that understands the contradiction and dissonance of reality, you can communicate twice as much in half the time.
   activated_abilities:
-  - Use Deception to Reduce a Chllenge's difficulty by 2
-  - Use Biology or Chemistry to reduce a Challenge's difficulty by 2
+  - Use Deception to Reduce a Chllenge's Difficulty by 2
+  - Use Biology or Chemistry to reduce a Challenge's Difficulty by 2
 - title: Prescient Brain
   system: thought
   description: A brain with hyper awareness and uncanny powers of prediction
   activated_abilities:
-  - Use Deduction to reduce a Challenge's difficulty by 2
+  - Use Deduction to reduce a Challenge's Difficulty by 2
   - Choose a Creature, you can determine what Limb the creature will Activate on their Turn
 - title: Tactical Brain
   system: thought
   description: A brain that is a master of strategy and problem solving 
   activated_abilities:
-  - End you turn immediatly. Execute the rest of this limb immedialty after another's Turn of your choice
+  - End your Turn now, select another Creature and continue your Turn after their Turn
   - Use Intimidation to Reduce a Chellenge's Difficult by 2
   passive_abilities:
     - When Injuring creatures with this Limb, Broken Body Parts are immediatly Severed
@@ -445,13 +443,13 @@ body_parts:
   description: A brain that loves the party and other creatures
   activated_abilities:
   - Grant the Charmed Condition to creatures that See you Perform
-  - Use Persuasion to reduce a Challenge's difficulty by 2
+  - Use Persuasion to reduce a Challenge's Difficulty by 2
 - title: Adrenal Gland
   system: endocrine
   description: A Gland that releases a energy inducing hormone
   activated_abilities:
   - Run to Distant
-  - End you turn immediatly. Execute the rest of this limb immedialty after another's Turn of your choice
+  - End you Turn now, select Another Creature and continue your Turn after their Turn
 - title: Tough Skin
   system: integumentary
   description: Thick rough Skin that provides protection
@@ -468,7 +466,7 @@ body_parts:
   system: integumentary
   description: Skin that can display varying magnificent colours
   activated_abilities:
-  - Use Camoflague to reduce a Challenge's difficult by 2
+  - Use Camoflague to reduce a Challenge's Difficulty by 2
   - Grant the Charmed Condition to creatures that See you Shine
 - title: Eel's Electric Organ
   system: circulatory
@@ -482,20 +480,20 @@ body_parts:
   system: endocrine
   description: A gland that produces a liquid poison
   activated_abilities:
-  - Produce a bottle of Poison
+  - Excrete a handful of poison
   passive_abilities:
   - Grant the Poisoned condition to creatures that Touch the poison
 - title: Cat's Heart
   system: circulatory
   activated_abilities:
-    - Do something risky to reduce a Challenge's difficulty by 2
+    - Do something risky to reduce a Challenge's Difficulty by 2
   passive_abilities:
   - You can exchange an Internal Injury for a Physical Injury
   - When Injured Obliterated Body Parts are immediatly Broken
 - title: Mole's Star-Nose
   system: aromatic
   description: An ugly but powerful nose that can detect slight aromas
-  activated_abilities: 
+  activated_abilities:
   - Grant the Disgusted Condition to creatures that See you Perform
   passive_abilities:
   - Smell the precise location of creatures within Distant
@@ -503,21 +501,21 @@ body_parts:
   system: endocrine
   description: A gland that produces an aresol of pungent odour
   activated_abilities:
-  - Disperse a Pungent Smell to a distance of Near
+  - Disperse a gas cloud to Near
   passive_abilities:
-    - Grant the Disgusted Condition to creatures that Smell the aresol
+    - Grant the Disgusted Condition to creatures that Smell the cloud
 - title: Mantis Eyes
   system: sight
   description: Eyes that can see light outside the visible spectrum
   activated_abilities:
-  - You can see through a single barrier
-  - You may prepare yourself to execute an Action immedialty after another's action of your choice
+  - See through a barrier of Close thickness within Distant
+  - End your Turn now, select another Creature and continue your Turn after their Turn
   - Select a single target, you can determine precisly what will occur in the next minute
 - title: Snake's Tongue
   system: aromatic
   description: A forked tongue that is sensitive to chemicals in the air
   activated_abilities:
-  - You can accuratley determine the indegrediants to anything you taste
+  - Taste the ingredients of concotions within Near
   - Use Deception to Reduce a Challenge's difficulty by 2
   passive_abilities:
   - Smell the precise location of creatures within Distant
@@ -525,13 +523,13 @@ body_parts:
   system: sight
   description: Powerful eyes that can inspect intricate detail
   activated_abilities:
-  - You may prepare yourself to execute an Action immedialty after another's action of your choice
-  - Use your sight to reduce a Challenge's difficulty by 2
+  - End your Turn now, select another Creature and continue your Turn after their Turn
+  - Use your sight to reduce a Challenge's Difficulty by 2
 - title: Bat Ears
   system: auditory
   description: Sensitive ears capable of echolocation
   passive_abilities:
-  - You can locate any creature by sound as if you can 'see' them
+  - Echolocate within Distant
   - Ignore the Deafened Condition
 - title: Whale Voice Box
   system: aromatic
@@ -539,12 +537,12 @@ body_parts:
   activated_abilities:
   - Grant the Deafened, or Charmed Condition to creatures that Hear you Sing
   passive_abilities:
-  - You can locate any creature by sound as if you can 'see' them
+    - Echolocate within Distant
 - title: Sensitive Ears
   system: auditory
   description: Ears capable of detecting the slightest of sonic detail
   activated_abilities: 
-  - Use your sense of Hearing to reduce a Challenge's difficulty by 2
+  - Use your sense of Hearing to reduce a Challenge's Difficulty by 2
   passive_abilities:
   - Echolocate within Distant
 - title: Short Horned Lizard Eyes
@@ -569,12 +567,11 @@ body_parts:
   - Ignore the Boiling Condition
 - title: Bombadier Beetle Chamber
   system: endocrine
-  description: An organ that creates a hard shelled explosive ball
+  description: An organ that creates a flammable gas
   activated_abilities:
-  - Produce an explosive shell 
+  -  Excrete an explosive gas to Near
   passive_abilities:
-  - Detonate the shell
-  - Grant the Burning Condition to Creatures that get within Close of the shell
+  - Grant the Burning Condition to Creatures that get within Personal Space of the gas
 - title: Turtle shell
   system: integumentary
   description: A Hard shell that is near impenetrable
@@ -598,18 +595,18 @@ body_parts:
   - Heal a Body Part by 1 Disrepair that is a member of the thought, sight, auditory system
   passive_abilities:
   - Anything in your Pouch can Ignore the Freezing Condition
-- title: Sharp teeth
+- title: Sharp Teeth
   system: aromatic
   description: Rows of razor sharp teeth
   activated_abilities:
-  - Reach to a distance of Close
+  - Reach to Close
   - Bite to deal 1 Physical Injury
   - Bite to deal 1 Physical Injury to the Circulatory system
 - title: Pointed Fangs
   system: aromatic
   description: Long spiked teeth
   activated_abilities:
-  - Reach to a distance of Close
+  - Reach to Close
   - Bite to Deal 1 Physical Injury
   - Bite to Deal 1 Physical Injury to the Endocrine system
 - title: Gnawing Jaws
@@ -675,7 +672,7 @@ body_parts:
   system: endocrine
   description: A Stink gland that produces a pungent liquid
   activated_abilities:
-  - Produce a bottle of liquid
+  - Excrete a handful of liquid
   passive_abilities:
   - Grant the Disgusted Condition to creatures that Smell the liquid
 - title: Blow hole

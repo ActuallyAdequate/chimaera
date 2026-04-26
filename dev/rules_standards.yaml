@@ -16,6 +16,14 @@ glossary:
     - Near
     - Distant
     - Afar
+  time:
+    - now
+    - after their Turn
+    - before their Turn
+    - before your next Turn
+    - after your next Turn
+    - on their next Turn
+    - on your turn
   range:
     - Reach
     - Throw
@@ -65,6 +73,7 @@ glossary:
     - Detect movement
     - Touch
     - Echolocate
+    - Taste
   action:
     - Slash
     - Electrocute
@@ -89,6 +98,16 @@ glossary:
     - Giggle
     - Sing
     - Digest
+  produce:
+    - Emits?
+    - Excretes?
+    - Disperses?
+  amount:
+    - pinch
+    - torrent
+    - handful
+    - heap
+    - coil
 templates:
   movement: '^{movement}( .+)? to {distance}$'
   range: '^{range}( .+)? to {distance}$'
@@ -99,7 +118,10 @@ templates:
   grant_condition: '^Grant the ({condition}(,( or)?)? )+Condition to (creatures (that {sense} you {action}|you {action}|that {sense} the .+|you {sense}|((that get)? within {distance}( of the .*)?))|yourself when .+)$'
   ignore_condition: '^((This {scope} Ignores)|(Ignore)) the ({condition}) condition( ((except|for|from|while)(.*)|to this Limb))?$'
   senses: '^{sense}( .*)? within {distance}$'
-  challenge: "^Use|Do .* to reduce a Challenge's difficulty by \\d+$"
+  challenge: "^Use|Do .* to reduce a Challenge's Difficulty by \\d+$"
   communiciation: "^Use .* to Communicate$"
+  split_turn: "End your Turn {time}, select another Creature and continue your Turn {time}"
+  produce: "{produce} (an? {amount} of .+|.+ to {distance})"
+  use_produce: "The .+ ({produce} .* to {distance})"
 
 

@@ -55,7 +55,7 @@ Some Abilities state that the Mutated can reduce a challenge When doing a
 particular activity. If the Muated incorporate this activity into their Action
 description, they can execute the challenge as if they had the the stated number
 less Body Parts in the Limb. For example if the Ability says "Use your knowledge
-of biology to reduce a challenge's difficulty by 2. Then you can execute the
+of biology to reduce a Challenge's Difficulty by 2. Then you can execute the
 challenge as if it was done with 2 less Body Parts in the limb.
 
 > [!IMPORTANT]

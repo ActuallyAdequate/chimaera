@@ -117,10 +117,8 @@ def generate_report(body_parts: list[BodyPart], output_file, rule_patterns):
             for category, pattern in rule_patterns.items():
                 if pattern.match(ability.strip()):
                     matched_category = category
-                    break
-            if matched_category:
-                ability_stats.setdefault(matched_category, []).append((title, ability))
-            else:
+                    ability_stats.setdefault(category, []).append((title, ability))
+            if not matched_category:
                 ability_stats.setdefault("unknown", []).append((title, ability))
         # for ability in abilities:
         #    ability = ability.lower()
