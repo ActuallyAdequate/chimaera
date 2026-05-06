@@ -7,8 +7,8 @@ particular direction.
 There are five Distances: Afar, Distant, Near, Close and Personal. In general
 Personal is occupying the same space, Close is within punching range, Near is
 within walking distance, Distant is within running distance, and Afar within
-throwing range. Each distance level roughly doubles how far away you are from
-something.
+clear visible/audible distance. Each distance level roughly doubles how far away
+you are from something.
 
 In addition, there are four Direction: Front, Left, Right, Back, which determine
 on which side of you an opposing creature may be.

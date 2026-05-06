@@ -22,7 +22,8 @@ the number of Body Parts the challenge fails. The Mutated still achieve what
 they wanted to, but the GM is granted a Hazard.
 
 If a Creature is completing a Challenge against the Mutated, a Failed Challenge
-means the Creature does not complete the Action.
+means the Creature does not complete the Action or the GM may give up a Hazard
+to allow the Creature to Succeed.
 
 > [!INFO]
 > This represents how limbs with fewer Body Parts, while being able to do less
@@ -38,7 +39,7 @@ for difficult problem-solving, or finding hidden clues. Any activity that could
 fail, and isn't granted directly from a Body Part may be considered challenging.
 
 Sometimes Body Parts state that Abilities taken against the creature are
-Challenging, such as trying to see a creature with a camoflagued Body Part.
+Challenging, such as trying to see a creature with a camouflaged Body Part.
 
 ## Hazards
 
@@ -52,8 +53,8 @@ introduce complications to travelling or changing the Weather.
 ## Reducing a Challenge
 
 Some Abilities state that the Mutated can reduce a challenge When doing a
-particular activity. If the Muated incorporate this activity into their Action
-description, they can execute the challenge as if they had the the stated number
+particular activity. If the Mutated incorporate this activity into their Action
+description, they can execute the challenge as if they had the stated number
 less Body Parts in the Limb. For example if the Ability says "Use your knowledge
 of biology to reduce a Challenge's Difficulty by 2. Then you can execute the
 challenge as if it was done with 2 less Body Parts in the limb.

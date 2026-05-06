@@ -16,7 +16,7 @@ Activated, while some control how the Mutated move or act.
 
 All Body Parts that do not have another Body Part Attached to it become covered
 in Acid. If you are unable to wash away the acid by the start of your next Turn,
-then the Acid will eat at you. Take 1 Internal Damage for each Body Part covered
+then the Acid will eat at you. Take 1 Internal Damage to each Body Part covered
 in Acid.
 
 <!-- An info graphic here would be useful -->
@@ -28,11 +28,11 @@ that are a member of the Sight System can be Activated.
 
 ### Boiling
 
-You have 1 less Action than you usually would.
+Increase the Difficulty of Challenge by 2
 
 ### Burning
 
-The Buner immediately chooses 1 limb of Body Parts on the creature being burnt.
+The Burner immediately chooses 1 limb of Body Parts on the creature being burnt.
 Each of these Body Parts are on fire. If you are unable to extinguish the fire
 by the start of your next Turn, then each Body Part on Fire takes 1 Internal
 Injury. The fire also then spreads to anything flammable, including other
@@ -60,7 +60,7 @@ closer the Body System that is sensing the disgust will be Inhibited.
 
 ### Suffocating
 
-Take 1 Internal Injury for each Action you execute while Suffocating
+Take 1 Internal Injury for each Body Part you execute while Suffocating
 
 ### Freezing
 
@@ -80,7 +80,7 @@ You cannot target the Creature that you are Impressed by.
 
 All Body Parts that are attached directly to the Body, become Poisoned. If you
 are unable to cure the Poison by the start of your next Turn, then you will get
-toxic shock. Take 1 Internal Damage for each Body Part that is Poisoned.
+toxic shock. Take 1 Internal Damage to each Body Part that is Poisoned.
 
 ### Prone
 

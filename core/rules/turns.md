@@ -28,3 +28,12 @@ situations. In case of another tie the order is decided by the GM.
 > turn order may be made ensuring the creatures ambushing go first as they were
 > able to surprise the Mutated. This is also the case if the Mutated ambush the
 > creatures.
+
+## Ending your Turn Early
+
+Some Body Parts allow the Mutated to end their Turn Now and continue it later,
+such as after another Creatures Turn. This means that they only execute Body
+Parts up to and including the Body Part that allows them to end their Turn. When
+continuing their turn they must use the next Body Part that is Attached to the
+Body Part that allowed them to end their Turn early, continuing execution of the
+remaining Body Parts that were in the Limb

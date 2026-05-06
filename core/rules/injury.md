@@ -20,12 +20,19 @@ resistance or defences to particular Injury types.
 
 In order to Deal an Injury do the following
 
-1. Complete a Challenge (You will still Deal an Injury whether you pass or fail
-   the Challenge)
-1. Select what Limb of the creature you want to Deal the Injury to.
-1. The creature taking the Injury will then choose what Body Parts in that Limb
+1. Complete a Challenge
+   > On a Failed Challenge the GM may:
+   >
+   > - Immediately spend the Hazard to Reduce he Injuries to 0.
+   > - Immediately spend the Hazard to Deal Injuries to the Mutated or create
+   >   some other Consequence, and continue resolving the attack as if the
+   >   Challenge passed.
+   > - Save the Hazard for later, and continue resolving the attack as if the
+   >   Challenge passed.
+2. Select what Limb of the creature you want to Deal the Injury to.
+3. The creature taking the Injury will then choose what Body Parts in that Limb
    gets Injured.
-1. That selected Body Part will have its Disrepair Increased by the number of
+4. That selected Body Part will have its Disrepair Increased by the number of
    Injuries.
 
 > [!INFO]
@@ -56,12 +63,12 @@ Then You will only take 1 Physical Damage.
 4. **Broken:** The Body Part no longer works and rests limp on your body.
 
 > [!IMPORTANT]
-> When a Body Part is Broken, the entire Limb cannot be Activated. You must use
-> you Mutagenic Cells Ability to remove the Limb
+> When a Body Part is Broken, all attached Body Parts can not be Activated. You
+> must use your Mutagenic Cells Ability to remove the Limb
 
-> If you decide to take an Injury to a Broken Body Part, it becomes Obliterated,
-> meaning it is discarded and cannot be healed. (This would also obliterate all
-> connected Body Parts!)
+> If you decide to take an Injury to a Broken Body Part or Detach it with
+> Mutagenic Cells Ability, it becomes Obliterated, meaning it is discarded and
+> cannot be healed. (This would also obliterate all Attached Body Parts!)
 
 ### Special States of Disrepair
 
@@ -95,4 +102,3 @@ a new Body Part and Activate their Mutagenic Cells.
 
 When the Mutated Defeat a creature they can take all non Broken Body Parts and
 repair them back to Healthy, Broken Body Parts are Obliterated.
-

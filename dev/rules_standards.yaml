@@ -74,6 +74,11 @@ glossary:
     - Touch
     - Echolocate
     - Taste
+  communication:
+    - Voice
+    - Colour
+    - Sign Language
+    - Pheromones
   action:
     - Slash
     - Electrocute
@@ -119,7 +124,7 @@ templates:
   ignore_condition: '^((This {scope} Ignores)|(Ignore)) the ({condition}) condition( ((except|for|from|while)(.*)|to this Limb))?$'
   senses: '^{sense}( .*)? within {distance}$'
   challenge: "^Use|Do .* to reduce a Challenge's Difficulty by \\d+$"
-  communiciation: "^Use .* to Communicate$"
+  communication: "^Use {communication} to Communicate$"
   split_turn: "End your Turn {time}, select another Creature and continue your Turn {time}"
   produce: "{produce} (an? {amount} of .+|.+ to {distance})"
   use_produce: "The .+ ({produce} .* to {distance})"

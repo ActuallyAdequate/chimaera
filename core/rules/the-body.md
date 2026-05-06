@@ -1,14 +1,16 @@
 # The Body and Mutation
 
 The body is the core of the Mutated, it grants basic Body Parts that allow the
-Mutated to move, attack, see, hear, think, and maintain life.
+Mutated to move, interact, see, hear, think, and maintain life.
 
-> [!Keywords] **Body:** The basic set of Body Parts that form the creature
-> **Body:** The basic set of Body Parts that form the creature **Body Parts:**
-> Grant and execute Abilities when Activated **Limb:** A set of Body Parts that
-> are connected to each other (All Body Parts in a limb are Activated on an
-> Action) **Body System:** Groups Body Parts together based on type. If the Body
-> System is inhibited then Body Parts of that type cannot be Activated. =
+> [!Note] Keywords
+>
+> - **Body:** The basic set of Body Parts that form the creature
+> - **Body Parts:** Grant and execute Abilities when Activated **Limb:** A set
+>   of Body Parts that are connected to each other (All Body Parts in a limb are
+>   Activated on an Action)
+> - **Body System:** Groups Body Parts together based on type. If the Body
+>   System is inhibited then Body Parts of that type cannot be Activated. =
 
 ## The Body's Systems
 
@@ -35,8 +37,8 @@ processes of the Mutated.
 
 > Sometimes Body Systems will be Inhibited such as darkness inhibiting the sight
 > system. Or a poison inhibiting the circulatory system, or being bound
-> inhibiting the muscular system. When a system is inhibited using Body Parts in
-> that system become difficult or are prevented entirely.
+> inhibiting the muscular system. When a system is inhibited the Mutated are
+> unable to Activate Body Parts of that Body System
 >
 > Creatures can use their Action to clear Inhibited systems if they can justify
 > it with their description.
@@ -48,8 +50,9 @@ processes of the Mutated.
 ## Mutating
 
 The creatures of Chimaera are mutanous, always tearing off and re-fusing Body
-Parts in response to the wild and hazardous environment. When mutating you can
-rearrange your Body Parts allowing to use your Body Parts in different ways.
+Parts in response to the wild and hazardous environment. Mutating is an Ability
+provided by the Body. When mutating you can rearrange your Body Parts allowing
+to use your Body Parts in different ways.
 
 ### Attaching Body Parts
 
@@ -72,12 +75,11 @@ attached to it, allowing you to form limbs of many Body Parts.
 
 The Mutated may have multiple Body Parts Attached into a single limb or Attached
 separately to the Body. Limbs allow efficient use of Actions, enabling multiple
-Body Parts to Activate in the same Action. However, this reduces the amount of
-Injuries you can take. For example, if wings and a poison gland are part of the
-same limb, you could fly to and poison a creature in a single Action. However,
-if the wings are Severed off so to would the Poison Gland. If they're separate,
-the wings could be Severed and the Poison Gland would remain, but it would take
-two Actions to Activate both Body Parts.
+Body Parts to Activate in the same Action. However there are two consequences
+for having large limbs.
+
+1. Limbs with more Body Parts are less likely to pass Challenges
+2.
 
 #### Order of Body Parts
 

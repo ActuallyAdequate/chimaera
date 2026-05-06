@@ -6,6 +6,7 @@ body:
     - Attach, Remove, and Rearrange your Body Parts
   passive_abilities:
     - When attaching Body Parts from Defeated creatures you can heal the Body Part to Healthy
+    - When detatching Body Parts that are Broken, they become Obliterated
 - title: Eyes
   system: sight
   description: Eyes that can see the 300-780nm spectrum of light
@@ -70,6 +71,8 @@ body_parts:
   activated_abilities:
     - Use camouflage to reduce a Challenge's Difficulty by 2
     - Squeeze to Near
+  passive_abilities:
+      - Use Color to Communicate
 - title: Starfish Ray
   system: circulatory
   description: A hard ray that extends from the body with suction cups lined on the bottom
@@ -424,6 +427,8 @@ body_parts:
   activated_abilities:
   - Use Deception to Reduce a Chllenge's Difficulty by 2
   - Use Biology or Chemistry to reduce a Challenge's Difficulty by 2
+  passive_abilities:
+  - Use Pheromones to Communicate
 - title: Prescient Brain
   system: thought
   description: A brain with hyper awareness and uncanny powers of prediction
@@ -450,6 +455,8 @@ body_parts:
   activated_abilities:
   - Run to Distant
   - End you Turn now, select Another Creature and continue your Turn after their Turn
+  passive_abilities:
+  - Use Pheromones to Communicate
 - title: Tough Skin
   system: integumentary
   description: Thick rough Skin that provides protection
@@ -468,6 +475,8 @@ body_parts:
   activated_abilities:
   - Use Camoflague to reduce a Challenge's Difficulty by 2
   - Grant the Charmed Condition to creatures that See you Shine
+  passive_abilities:
+  - Use Color to Communicate
 - title: Eel's Electric Organ
   system: circulatory
   description: An organ that emits shocking electrical strikes that can travel through conductive material
@@ -504,6 +513,7 @@ body_parts:
   - Disperse a gas cloud to Near
   passive_abilities:
     - Grant the Disgusted Condition to creatures that Smell the cloud
+    - Use Pheromones to Communicate
 - title: Mantis Eyes
   system: sight
   description: Eyes that can see light outside the visible spectrum
@@ -525,6 +535,15 @@ body_parts:
   activated_abilities:
   - End your Turn now, select another Creature and continue your Turn after their Turn
   - Use your sight to reduce a Challenge's Difficulty by 2
+  passive_abilities:
+  - See microscopic details within Afar
+- title:  Owl Eyes
+  system: sight
+  description: Wise eyes capable of night vision
+  activated_abilities:
+  - Choose a Creature, you can determine what Limb the creature will Activate on their Turn
+  passive_abilities:
+  - See in complete darkness within Afar
 - title: Bat Ears
   system: auditory
   description: Sensitive ears capable of echolocation
