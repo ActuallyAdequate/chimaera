@@ -43,20 +43,21 @@ weather in a dynamic way without changing it completely at random.
 
 Landing on a Dark Green hex signifies particularly extreme weather. This will
 incur some Condition placed on the Creatures. This can be found under Severe
-Weather Effects labelled Weather Hex's season.
+Weather Effects.
 
 Landing on one of the bright green-yellow tiles will result in a weather event.
 Lookup the name under Weather Events which explains the effect.
 
 Additionally, landing on the Season Change hex in the centre will cause the
 season to change. Grab one of the other Weather hexes, and place the marker on
-the starting position.
+the starting position denoted with a double line.
 
 ### Severe Weather
 
-**Dry Season:** Gain the Parched Condition **Monsoon Season:** Gain the Deafened
-Condition **Summer Season:** Gain the Boiling Condition **Winter Season:** Gain
-the Freezing Condition
+- **Dry Season:** Gain the Parched Condition
+- **Monsoon Season:** Gain the Deafened Condition
+- **Summer Season:** Gain the Exhausted Condition
+- **Winter Season:** Gain the Freezing Condition
 
 ### Weather Events
 
@@ -103,7 +104,7 @@ Injury.
 
 #### Heatwave
 
-All creatures gain the Boiling Condition. At the start of each round a random
+All creatures gain the Exhausted Condition. At the start of each round a random
 unoccupied area catches on fire, if a creature spends any part of their turn in
 the same place as the fire they gain the Burning Condition.
 

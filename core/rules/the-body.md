@@ -35,17 +35,18 @@ processes of the Mutated.
 - <img src="../media/integumentary_system.svg" width="20" height="20" alt="Integumentary">
   The Mutated's ability to endure hardship, appearance, and structure.
 
-> Sometimes Body Systems will be Inhibited such as darkness inhibiting the sight
-> system. Or a poison inhibiting the circulatory system, or being bound
-> inhibiting the muscular system. When a system is inhibited the Mutated are
-> unable to Activate Body Parts of that Body System
->
-> Creatures can use their Action to clear Inhibited systems if they can justify
-> it with their description.
->
-> A creature can also intentionally Inhibit a Body System to avoid harmful
-> conditions that only effect creatures with a particular Uninhibited Body
-> System.
+### Inhibiting Body Systems
+
+Sometimes Body Systems will be Inhibited such as darkness inhibiting the sight
+system. Or a poison inhibiting the circulatory system, or being bound inhibiting
+the muscular system. When a system is inhibited the Mutated are unable to
+Activate Body Parts of that Body System
+
+Creatures can use their Action to clear Inhibited systems if they can justify it
+with their description.
+
+A creature can also intentionally Inhibit a Body System to avoid harmful
+conditions that only effect creatures with a particular Uninhibited Body System.
 
 ## Mutating
 

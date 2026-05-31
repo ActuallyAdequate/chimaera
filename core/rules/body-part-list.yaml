@@ -3,7 +3,7 @@ body:
   system: endocrine
   description: Cells imbued with mutagenic serum
   activated_abilities: 
-    - Attach, Remove, and Rearrange your Body Parts
+    - Attach, Detach, and Rearrange your Body Parts
   passive_abilities:
     - When attaching Body Parts from Defeated creatures you can heal the Body Part to Healthy
     - When detatching Body Parts that are Broken, they become Obliterated
@@ -78,8 +78,9 @@ body_parts:
   description: A hard ray that extends from the body with suction cups lined on the bottom
   activated_abilities:
     - Reach to Close
-    - Broken, Obliterated or Severed Body Parts can be regenerated after an hour
     - Climb to Near
+  passive_abilities:
+  - If a Body Part would be Obliterate it is instead Broken
 - title: Glow Worm Abdomen
   system: endocrine
   description: Produce a thread that has bioluminescent properties, that can create a pulsating light
@@ -143,7 +144,7 @@ body_parts:
   activated_abilities:
     - Reach to Close
     - Use sleight of hand to reduce a Challenge's Difficulty by 2
-    - Use a tool to reduce a Challenge's Difficulty by 2
+    - Use Mechanical Artifacts to reduce a Challenge's Difficulty by 2
   passive_abilities:
     - Use sign language to communicate
 - title: Cheetah's Legs
@@ -164,7 +165,7 @@ body_parts:
   description: A set of odd fingers, one long, one wide, one curled, two stubby
   activated_abilities:
     - Reach to Close
-    - Use an electrical device to reduce a Challenge by 2
+    - Use a Key or Controller Artifact to reduce a Challenge by 2
     - Use sleight of hand to to reduce a Challenge by 2
   passive_abilities:
     - Use sign language to Communicate
@@ -411,14 +412,14 @@ body_parts:
   system: thought
   description: A brain that has knowledge of various specialist topics
   activated_abilities:
-  - Use Chemistry or Physics to reduce a Challenge's Difficulty by 2
-  - Use electrical devices to reduce a Challenge's Difficulty by 2
+  - Use Mechanical Artifacts to reduce a Challenge's Difficulty by 2
+  - Use Power Artifacts to reduce a Challenge's Difficulty by 2
   - Use Persuasion to reduce a Challenge's Difficulty by 2
 - title: Superior Brain
   system: thought
   description: A brain that exhibits mastery over others
   activated_abilities:
-  - Use Biology or Physics to reduce a Challenge's Difficulty by 2
+  - Use Power Artifacts to reduce a Challenge's Difficulty by 2
   - Use Arrogance to reduce a Challenge's Difficulty by 2
   - Use Deduction to reduce a Challenge's Difficulty by 2
 - title: Split Brain
@@ -426,7 +427,7 @@ body_parts:
   description: A Brain that understands the contradiction and dissonance of reality, you can communicate twice as much in half the time.
   activated_abilities:
   - Use Deception to Reduce a Chllenge's Difficulty by 2
-  - Use Biology or Chemistry to reduce a Challenge's Difficulty by 2
+  - Use Chemical Artifacts to reduce a Challenge's Difficulty by 2
   passive_abilities:
   - Use Pheromones to Communicate
 - title: Prescient Brain
@@ -571,7 +572,7 @@ body_parts:
   - Throw blood to Near
   passive_abilities:
   - Grant the Acidic Condition to creatures that Touch the blood
-  - Ignore the Boiling Condition
+  - Ignore the Exhasuted Condition
 - title: Oppossum Bone Marrow
   system: circulatory
   description: Marrow with powerful resistances to toxins
@@ -583,7 +584,7 @@ body_parts:
   description: Large ears leathery ears
   passive_abilities:
   - Echolocate within Distant
-  - Ignore the Boiling Condition
+  - Ignore the Exhausted Condition
 - title: Bombadier Beetle Chamber
   system: endocrine
   description: An organ that creates a flammable gas
@@ -609,11 +610,10 @@ body_parts:
 - title: Marsupial Pouch
   system: integumentary
   description: A pouch that can keep things warm
-  activated_abilities:
-  - You can hide items up to 1 cubic meter in your Pouch
-  - Heal a Body Part by 1 Disrepair that is a member of the thought, sight, auditory system
   passive_abilities:
   - Anything in your Pouch can Ignore the Freezing Condition
+  - You May store 2 Precursor Artifacts on this Body Part without encumbering its
+  - If the Body Part is Broken the Precursor Artifacts are lost
 - title: Sharp Teeth
   system: aromatic
   description: Rows of razor sharp teeth
@@ -647,7 +647,7 @@ body_parts:
   activated_abilities:
   - You can temporarily drop a set of Body Parts and treat them as a seperate creature
   passive_abilities:
-  - Broken, Obliterated or Severed Body Parts can be regenerated after an hour
+  - If a Body Part would be Obliterated it is instead Broken
 - title: Pufferfish Air Bag
   system: circulatory
   description: A body that can inflate to three times its size covered in needles
@@ -663,16 +663,14 @@ body_parts:
   - Throw to Near
   - Produce a bottle of spit
   passive_abilities:
-  - Ignore the Boiling Condition  
+  - Ignore the Exhausted Condition  
   - Grant the Acidic Condition to creatures that Touch the spit
 - title: Decorator Crab shell
   system: integumentary
   description: A Hard shell decorated with treasure and trash
-  activated_abilities:
-  - Place Broken Body Parts on this Body Part
   passive_abilities:
-  - If a Body Part were to be Obliterated or Severed instead leave it as Broken and place it on the Shell
-  - You may use Mutagenic Cells to take one Body Part from the Shell and place it back on your Body, and heal it to Healthy
+      - You May store 2 Precursor Artifacts on this Body Part without encumbering its
+      - If the Body Part is Broken the Precursor Artifacts are lost
 - title: Peacock feathers
   system: integumentary
   description: A marvelous bouquet of colourful feathers
@@ -715,7 +713,7 @@ body_parts:
   activated_abilities:
   - Reach to Close
   - Impale to Deal 1 Internal Injury
-  - Suck to heal a Body Part by 1 Disrepair that is a member of the endocrine or aromatic system
+  - Suck the Blood of a Creature to clear a condition, provided the creature also does not have that conition.
 - title: Crab Pincers
   system: muscular
   description: Pincers with incredible strength at snapping

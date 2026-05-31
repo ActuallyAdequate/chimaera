@@ -28,9 +28,10 @@ with the Peripheral Body Part.
 
 > Imagine a creature with a Poison Gland Body Part, and their task is to poison
 > a tyrant. There are different ways that this could be achieved depending on
-> how the Body Parts are connected. **The Poison Gland is Attached directly to
-> the Body:** The Mutated could Activate to squeeze some poison out onto some
-> food.
+> how the Body Parts are connected.
+>
+> **The Poison Gland is Attached directly to the Body:** The Mutated could
+> Activate to squeeze some poison out onto some food.
 >
 > **The Poison Gland is Attached to Cheetah Legs which are directly Attached to
 > the Body:** The Mutated could activate the legs to sprint across a hallway,

@@ -18,12 +18,12 @@ resistance or defences to particular Injury types.
 
 ### Dealing an Injury
 
-In order to Deal an Injury do the following
+In order to Deal Injuries do the following
 
 1. Complete a Challenge
    > On a Failed Challenge the GM may:
    >
-   > - Immediately spend the Hazard to Reduce he Injuries to 0.
+   > - Immediately spend the Hazard to Reduce the Injuries to 0.
    > - Immediately spend the Hazard to Deal Injuries to the Mutated or create
    >   some other Consequence, and continue resolving the attack as if the
    >   Challenge passed.
@@ -35,23 +35,16 @@ In order to Deal an Injury do the following
 4. That selected Body Part will have its Disrepair Increased by the number of
    Injuries.
 
-> [!INFO]
-> If increasing the Disrepair would cause the Body Parts to become Broken, then
-> all other Body Parts attached to it can not be Executed when the Limb is
-> Activated.
->
-> Similarly if a Body Part is Severed or Obliterated all Body Parts attached to
-> it are also Severed or Obliterated.
->
-> When Mutating with Mutagenic Cells you can rearrange the order of the Body
-> Parts so that injured Body Parts don't disable an entire limb.
+> [!IMPORTANT]
+> When Dealing multiple Injuries with multiple Body Parts, you only execute One
+> Challenge for the entire Action to achieve the Goal of dealing Injuries.
 
 ### Ignoring Injuries
 
 Some Body Parts allows you to ignore 1 more injuries of a certain type either
 Physical or Internal. This allows you to reduce the number of Injuries taken
 each time you are targeted by another's Action. For example if a Creature
-Activates two Body Parts, That are part of a limb, that both Deal 1 Physical
+Activates two Body Parts, that are part of a limb, that both Deal 1 Physical
 Damage, and you have a Body Part that allows you to Ignore 1 Physical Damage.
 Then You will only take 1 Physical Damage.
 
@@ -61,14 +54,6 @@ Then You will only take 1 Physical Damage.
 2. **Scarred:** The Body Part is still functioning but appears bruised and cut.
 3. **Septic:** The Body Part is heavily damaged puss seeping from deep wounds.
 4. **Broken:** The Body Part no longer works and rests limp on your body.
-
-> [!IMPORTANT]
-> When a Body Part is Broken, all attached Body Parts can not be Activated. You
-> must use your Mutagenic Cells Ability to remove the Limb
-
-> If you decide to take an Injury to a Broken Body Part or Detach it with
-> Mutagenic Cells Ability, it becomes Obliterated, meaning it is discarded and
-> cannot be healed. (This would also obliterate all Attached Body Parts!)
 
 ### Special States of Disrepair
 
@@ -81,6 +66,23 @@ Some Abilities will allow for the following special states of Disrepair.
   the creature that severed it. They can then spend an Action to use their
   Mutagenic Cells, to attach the severed piece.
 
+> [!IMPORTANT]
+> When a Body Part is Broken, all attached Body Parts can not be Activated.
+>
+> Similarly if a Body Part is Severed or Obliterated all Body Parts attached to
+> it are also Severed or Obliterated.
+>
+> If you decide to take an Injury to a Broken Body Part or Detach it with
+> Mutagenic Cells Ability, it becomes Obliterated.
+>
+> When Mutating with Mutagenic Cells you can rearrange the order of the Body
+> Parts so that injured Body Parts don't disable an entire limb.
+
+### Repairing Injuries
+
+Body Parts can be repaired by consuming Serum. Each vial of Serum can decrease
+the Disrepair of one Body Part to Healthy
+
 > [!TIP]
 > If playing with Body Part cards, the orientation of the cards will correspond
 > to the level of disrepair: ![Rotating Cards](../media/damage-cards.png)
@@ -89,9 +91,10 @@ Some Abilities will allow for the following special states of Disrepair.
 
 ## Defeat
 
-If more than half of a creatures Body Parts are Broken they become Defeated.
-This means they are unable to participate in the turn order until they are given
-a new Body Part and Activate their Mutagenic Cells.
+Creature is Defeated when it has no Limbs that can be Activated. This could be
+when the Creature has no Body Parts left, or all Body Parts are attached to
+Broken Body Parts, or all its Body Systems are Inhibited. Abilities that are
+Granted by the Body to not count toward calculating Defeat.
 
 > [!INFO]
 > A creature can use the Mutagenic Cells to detach Broken Body Parts, to delay

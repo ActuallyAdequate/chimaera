@@ -7,7 +7,7 @@ Creature has an opportunity to play.
 ## How many Actions
 
 Every Creature including the Mutated have 1 Action on their turn. This means
-that the select 1 Goal and 1 Limb to Activate and resolve all subsequent Body
+that they select 1 Goal and 1 Limb to Activate and resolve all subsequent Body
 Parts.
 
 > Remember that the description of the Action must execute the Body Parts in the

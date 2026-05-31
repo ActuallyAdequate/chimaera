@@ -3,7 +3,7 @@
 The world of Chimaera is a dangerous place, and sometimes when executing Actions
 the Mutated may not be able to succeed without a cost.
 
-The GM may call that a particular Action is Challenging, In this case the GM may
+The GM may call that a particular Goal is Challenging, In this case the GM may
 gain a Hazard which they can spend to introduce complications or accidents which
 put the Mutated in precarious positions.
 
@@ -27,19 +27,26 @@ to allow the Creature to Succeed.
 
 > [!INFO]
 > This represents how limbs with fewer Body Parts, while being able to do less
-> are more potent in their focus and therefor can succeed more often
+> are more potent in their focus and therefore can succeed more often
 
 ## When is Something Challenging?
 
-Hazards can be granted for any particularly challenging Activity. This may be a
+Hazards can be granted for any particularly challenging Goal. This may be a
 challenging Social Encounter, where you need to lie, persuade or threaten
 another creature. It may be a tough environmental encounter, where you have to
 navigate tricky paths, or traverse unstable formations. Hazards can be granted
-for difficult problem-solving, or finding hidden clues. Any activity that could
-fail, and isn't granted directly from a Body Part may be considered challenging.
+for difficult problem-solving, or finding hidden clues. Any Goal that could fail
+could be considered Challenging.
 
 Sometimes Body Parts state that Abilities taken against the creature are
 Challenging, such as trying to see a creature with a camouflaged Body Part.
+
+> [!IMPORTANT]
+> The mutated only resolve one Challenge per Goal, not per Ability. If the
+> Mutated's Goal is to steal a key, and they Select A limb with Body Parts that
+> let them camouflage, Climb a precarious wall and steal the key with sleight of
+> Hand. Even though the climb and the stealing might individually be Challenging
+> the Mutated only need to complete one Challenge to achieve the entire Goal
 
 ## Hazards
 
@@ -47,12 +54,12 @@ The GM chooses how Hazards are allocated, to make the Mutated's situation more
 dangerous. They may spend them immediately after being granted to create a
 drawback to the current Action such as: Ignoring Injuries, Ignoring Conditions,
 or forcing the Mutated to have an accident; or they may be allocated to the
-ecosystem you are in to increase its hostility, or they may be allocated to
+Ecosystem you are in to increase its Hostility, or they may be allocated to
 introduce complications to travelling or changing the Weather.
 
 ## Reducing a Challenge
 
-Some Abilities state that the Mutated can reduce a challenge When doing a
+Some Abilities state that the Mutated can reduce a Challenge when doing a
 particular activity. If the Mutated incorporate this activity into their Action
 description, they can execute the challenge as if they had the stated number
 less Body Parts in the Limb. For example if the Ability says "Use your knowledge

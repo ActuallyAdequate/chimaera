@@ -26,9 +26,9 @@ in Acid.
 The Sight Body System is inhibited. This means immediately that no Body Parts
 that are a member of the Sight System can be Activated.
 
-### Boiling
+### Exhausted
 
-Increase the Difficulty of Challenge by 2
+Increase the Difficulty of Challenges by 2
 
 ### Burning
 
@@ -108,5 +108,5 @@ condition will end at the start of their next turn. A Condition may be caused by
 the Action of another creature, such as Prone or Restrained, these can be
 cleared by using an Action to get up, or completing a challenge to break out of
 restraints. Other conditions such as Burning or Acidic will end when the fire or
-acid is removed. Some conditions such a Boiling and Freezing can be caused by
+acid is removed. Some conditions such a Exhausted and Freezing can be caused by
 the weather, and so will be cleared when the weather event ends.
