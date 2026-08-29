@@ -12,19 +12,18 @@ Below are some examples of Action Goals:
 
 - Attacking a creature
 - Damaging a group of creatures at once
-- Convincing a towns' person to do something
+- Convincing a colony's person to do something
 - Setting up a trap
 - Traversing a hazardous bridge
 
 ## Actions and Body Parts
 
-To execute the action you will choose a Limb that has **no Broken Body Parts**,
-this will Activate all the Body Parts that are part of that limb. The player
-must then describe how the Mutated use the connected Body Parts to achieve the
-goal. **The Order of the Body Parts in the limb is important**. The description
-must mention each Body Part in the order that they are present in the limb,
-starting from the Body Part that is directly attached to the Body and ending
-with the Peripheral Body Part.
+To execute the action you will choose a Limb, this will Activate all the Body
+Parts that are part of that limb. The player must then describe how the Mutated
+use the connected Body Parts to achieve the goal. **The Order of the Body Parts
+in the limb is important**. The description must mention each Body Part in the
+order that they are present in the limb, starting from the Body Part that is
+directly attached to the Body and ending with the Peripheral Body Part.
 
 > Imagine a creature with a Poison Gland Body Part, and their task is to poison
 > a tyrant. There are different ways that this could be achieved depending on
@@ -53,14 +52,21 @@ with the Peripheral Body Part.
 > connected to the Body, the action is modified by the Cheetah Legs resulting in
 > rolling globules of poison.
 
+## Activation and Broken Body Parts
+
+When Activating Body Parts in A Limb you must stop as soon as you reach a Broken
+Body Part. This means any Body Parts attached to a Broken Body Part are not
+Activated.
+
 ## Activating Body Parts
 
 ![Body Part Attachments](../media/body_part_attachement.svg)
 
 - The Body has 4 Limbs, only one of these can be selected to execute the Action
-- The Body Part 1 are directly connected to the Body and so must be first in the
+- The Body Part 2 are directly connected to the Body and so must be first in the
   description if it is chosen
-- The Body Part 6 is a Peripheral Limb and so must be last in in the description
+- The Body Part 7 is a Peripheral Limb and so must be last in in the description
   if it is chosen
-- Activating Limb with Body Part 4 doesn't Activate any additional Body Parts.
-- Body Part 7 is Broken, therefore the Limb it is part of cannot be Activated
+- Activating a Limb with Body Part 4 doesn't Activate any additional Body Parts.
+- Body Part 5 is Broken, thus if the limb is chosen only Body Part 1 can be
+  Activated as Body Part 6 is attached to a Broken Body Part
